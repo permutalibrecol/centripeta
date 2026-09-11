@@ -1,13 +1,8 @@
 ---
 // src/layouts/Layout.astro
-import Logo from '../components/Logo.astro'; // Importamos tu logo vectorizado
+import Logo from '../components/Logo.astro';
 
-interface Props {
-	title: string;
-	description?: string;
-}
-
-const { title, description = "Centrípeta Marketing - Tu aliado estratégico en el mundo digital." } = Astro.props;
+const { title, description = "Centrípeta Marketing - Tu aliado estratégico." } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,13 +13,11 @@ const { title, description = "Centrípeta Marketing - Tu aliado estratégico en 
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
-		<!-- Fuente Moderna y Profesional -->
 		<link rel="preconnect" href="https://googleapis.com">
 		<link rel="preconnect" href="https://gstatic.com" crossorigin>
 		<link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<!-- Navegación con tu Logo Vectorial -->
 		<header class="navbar">
 			<div class="container nav-container">
 				<a href="/" class="logo-link">
@@ -39,12 +32,10 @@ const { title, description = "Centrípeta Marketing - Tu aliado estratégico en 
 			</div>
 		</header>
 
-		<!-- Aquí se renderiza el contenido de cada página -->
 		<main>
 			<slot />
 		</main>
 
-		<!-- Pie de página unificado -->
 		<footer class="footer">
 			<div class="container footer-container">
 				<div class="footer-contact">
@@ -52,7 +43,7 @@ const { title, description = "Centrípeta Marketing - Tu aliado estratégico en 
 					<a href="mailto:agenciacentripeta@gmail.com" class="email-link">agenciacentripeta@gmail.com</a>
 				</div>
 				<div class="footer-legal">
-					<p>&reg; Centrípeta todos los derechos reservados 2024 - {new Date().getFullYear()}</p>
+					<p>&reg; Centrípeta 2024 - {new Date().getFullYear()}</p>
 					<div class="legal-links">
 						<a href="/politica-privacidad">Política de Privacidad</a>
 						<a href="/politica-cookies">Política de cookies</a>
@@ -65,43 +56,19 @@ const { title, description = "Centrípeta Marketing - Tu aliado estratégico en 
 </html>
 
 <style is:global>
-	:root {
-		--primary: #0f172a; /* Azul oscuro elegante */
-		--accent: #2563eb;  /* Azul eléctrico vibrante */
-		--background: #ffffff;
-		--surface: #f8fafc;
-		--text: #1e293b;
-		--text-muted: #64748b;
-		--border: #e2e8f0;
-	}
-
+	:root { --primary: #0f172a; --accent: #2563eb; --background: #ffffff; --surface: #f8fafc; --text: #1e293b; --text-muted: #64748b; --border: #e2e8f0; }
 	* { box-sizing: border-box; margin: 0; padding: 0; }
-
-	html {
-		font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-		background: var(--background);
-		color: var(--text);
-		scroll-behavior: smooth;
-	}
-
+	html { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; background: var(--background); color: var(--text); scroll-behavior: smooth; }
 	body { min-height: 100vh; display: flex; flex-direction: column; }
 	.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
-
-	/* Navbar */
 	.navbar { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
 	.nav-container { height: 80px; display: flex; justify-content: space-between; align-items: center; }
-	
 	.logo-link { text-decoration: none; display: flex; align-items: center; }
-	
-	/* Corrección del color del texto de tu Logo */
 	.logo-text { color: var(--primary) !important; font-size: 1.65rem; font-weight: 700; letter-spacing: -0.02em; }
-
 	.nav-menu a { text-decoration: none; color: var(--text-muted); font-weight: 500; margin-left: 2rem; transition: color 0.2s; font-size: 0.95rem; }
 	.nav-menu a:hover { color: var(--primary); }
 	.nav-menu .btn-nav { background: var(--primary); color: white !important; padding: 0.5rem 1.2rem; border-radius: 6px; }
 	.nav-menu .btn-nav:hover { background: var(--accent); }
-
-	/* Footer */
 	.footer { margin-top: auto; padding: 4rem 0 2rem; background: var(--surface); border-top: 1px solid var(--border); }
 	.footer-container { display: flex; flex-direction: column; gap: 2rem; text-align: center; }
 	.email-link { font-size: 1.25rem; color: var(--accent); font-weight: 600; text-decoration: none; }
@@ -109,9 +76,5 @@ const { title, description = "Centrípeta Marketing - Tu aliado estratégico en 
 	.legal-links { display: flex; justify-content: center; gap: 1.5rem; }
 	.legal-links a { color: var(--text-muted); text-decoration: none; }
 	.legal-links a:hover { color: var(--accent); }
-
-	@media (max-width: 768px) {
-		.nav-menu { display: none; } /* Oculta menú en móviles por simplicidad web por ahora */
-		.legal-links { flex-direction: column; gap: 0.5rem; }
-	}
+	@media (max-width: 768px) { .nav-menu { display: none; } .legal-links { flex-direction: column; gap: 0.5rem; } }
 </style>
