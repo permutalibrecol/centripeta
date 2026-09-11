@@ -1,19 +1,11 @@
 {
-  "name": "centripeta-portfolio",
-  "type": "module",
+  "name": "centripeta-eleventy",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "build": "eleventy --output=_site --pathprefix=/centripeta"
   },
   "dependencies": {
-    "astro": "^4.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "typescript": "^5.0.0"
+    "@11ty/eleventy": "^2.0.1"
   }
 }
