@@ -1,0 +1,58 @@
+---
+layout: layout.njk
+title: Agenda tu Consultoría
+---
+<style>
+	.contact-layout { padding: 8rem 0; min-height: 85vh; display: flex; align-items: center; background: var(--bg); }
+	.grid-contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 4rem; align-items: center; }
+	.contact-info h1 { font-size: 2.8rem; color: var(--primary); line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: -0.03em; font-weight: 700; }
+	.contact-info p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 2.5rem; }
+	.contact-channels { display: flex; flex-direction: column; gap: 1.5rem; }
+	.channel-item { display: flex; gap: 1rem; align-items: center; }
+	.channel-item .icon { font-size: 1.5rem; background: var(--surface); padding: 0.75rem; border-radius: 50%; border: 1px solid var(--border); }
+	.channel-text { display: flex; flex-direction: column; }
+	.channel-text span { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+	.channel-text a, .channel-text p { font-size: 1.15rem; color: var(--primary); text-decoration: none; font-weight: 600; margin: 0; }
+	.channel-text a:hover { color: var(--accent); }
+	.contact-form { background: var(--surface); padding: 2.5rem; border-radius: 20px; border: 1px solid var(--border); display: flex; flex-direction: column; gap: 1.5rem; }
+	.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+	.form-group label { font-size: 0.9rem; font-weight: 600; color: var(--primary); }
+	.form-group input, .form-group textarea { padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border); font-family: inherit; font-size: 1rem; color: white; background-color: var(--bg); }
+	.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+	.btn-submit { background: var(--accent); color: white; border: none; padding: 1rem; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+	.btn-submit:hover { background: var(--accent-lime); color: var(--bg); }
+</style>
+
+<section class="contact-layout">
+	<div class="container grid-contact">
+		<div class="contact-info">
+			<h1>Hablemos de tu próximo proyecto</h1>
+			<p>¿Listo para llevar tu marca al siguiente nivel con una plataforma web impecable, rápida y vendedora? Completa el formulario y te contactaremos en menos de 24 horas.</p>
+			<div class="contact-channels">
+				<div class="channel-item">
+					<span class="icon">📧</span>
+					<div class="channel-text">
+						<span>Correo Electrónico Corporativo</span>
+						<a href="mailto:agenciacentripeta@gmail.com">agenciacentripeta@gmail.com</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<form class="contact-form" action="https://formspree.io" method="POST">
+			<div class="form-group">
+				<label for="name">Nombre completo o Empresa</label>
+				<input type="text" id="name" name="name" required placeholder="Ej. Carlos Mendoza" />
+			</div>
+			<div class="form-group">
+				<label for="email">Correo electrónico de contacto</label>
+				<input type="email" id="email" name="email" required placeholder="carlos@tuempresa.com" />
+			</div>
+			<div class="form-group">
+				<label for="message">Cuéntanos sobre tu negocio</label>
+				<textarea id="message" name="message" rows="4" required placeholder="¿Qué tipo de sitio web o aplicación móvil necesitas?"></textarea>
+			</div>
+			<button type="submit" class="btn-submit">Enviar Mensaje Estratégico</button>
+		</form>
+	</div>
+</section>
