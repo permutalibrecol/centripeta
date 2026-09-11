@@ -1,13 +1,5 @@
 ---
 // src/components/ProjectCard.astro
-interface Props {
-	title: string;
-	client: string;
-	type: string; // Simplificado a string para evitar bloqueos del validador
-	url: string;
-	description: string;
-}
-
 const { title, client, type, url, description } = Astro.props;
 
 const badgeStyles = {
@@ -16,8 +8,7 @@ const badgeStyles = {
 	gsites: { label: "Google Sites Cloud", color: "#d97706", bg: "#fef3c7" }
 };
 
-// Validación segura para evitar errores de índice en el compilador
-const currentBadge = badgeStyles[type as keyof typeof badgeStyles] || badgeStyles['gsites'];
+const currentBadge = badgeStyles[type] || badgeStyles['gsites'];
 ---
 
 <div class="project-card">
@@ -52,11 +43,7 @@ const currentBadge = badgeStyles[type as keyof typeof badgeStyles] || badgeStyle
 		min-height: 280px;
 		transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
 	}
-	.project-card:hover {
-		transform: translateY(-6px);
-		box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08);
-		border-color: var(--accent);
-	}
+	.project-card:hover { transform: translateY(-6px); box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08); border-color: var(--accent); }
 	.project-header { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
 	.tech-badge { align-self: flex-start; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.02em; }
 	.client-name { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
