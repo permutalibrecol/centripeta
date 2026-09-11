@@ -1,0 +1,53 @@
+---
+layout: layout.njk
+title: Nuestra Metodología
+---
+<style>
+	.page-hero { padding: 8rem 0 4rem; text-align: center; border-bottom: 1px solid var(--border); }
+	.hero-subtitle { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--accent-lime); letter-spacing: 0.05em; display: inline-block; margin-bottom: 0.75rem; }
+	.page-hero h1 { font-size: 2.8rem; color: var(--primary); margin-bottom: 1rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; }
+	.page-hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 750px; margin: 0 auto; line-height: 1.6; }
+	.methodology-section { padding: 6rem 0; }
+	.grid-two { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
+	.text-block h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--primary); font-weight: 700; }
+	.text-block p { color: var(--text-muted); line-height: 1.7; font-size: 1.05rem; margin-bottom: 1.25rem; }
+	.pillars-grid { display: flex; flex-direction: column; gap: 2rem; }
+	.pillar-item { display: flex; gap: 1.5rem; background: var(--surface); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border); }
+	.pillar-icon { font-size: 2rem; background: var(--bg); padding: 0.5rem; border-radius: 12px; height: fit-content; border: 1px solid var(--border); }
+	.pillar-info h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--primary); font-weight: 700; }
+	.pillar-info p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+	@media (max-width: 960px) { .grid-two { grid-template-columns: 1fr; gap: 3rem; } }
+</style>
+
+<section class="page-hero">
+	<div class="container">
+		<span class="hero-subtitle">Ingeniería & Estrategia Digital</span>
+		<h1>El Motor Detrás de tu Rendimiento Digital</h1>
+		<p>En Centrípeta Marketing desarrollamos soluciones digitales nativas orientadas a la velocidad de conversión y la eficiencia en la nube.</p>
+	</div>
+</section>
+
+<section class="methodology-section">
+	<div class="container grid-two">
+		<div class="text-block">
+			<h2>Nuestra Filosofía Operativa</h2>
+			<p>Entendemos que el mercado digital moderno no perdona las interfaces lentas ni las caídas de sistema. Por eso, ayudamos a marcas internacionales y locales a migrar sus ecosistemas a infraestructuras óptimas.</p>
+		</div>
+		<div class="pillars-grid">
+			<div class="pillar-item">
+				<div class="pillar-icon">⚡</div>
+				<div class="pillar-info">
+					<h3>Arquitectura Jamstack Rápida</h3>
+					<p>Eliminamos la sobrecarga innecesaria entregando código limpio optimizado para Google y búsquedas orgánicas.</p>
+				</div>
+			</div>
+			<div class="pillar-item">
+				<div class="pillar-icon">☁️</div>
+				<div class="pillar-info">
+					<h3>Optimización de Costos Cloud</h3>
+					<p>Reducimos tus gastos de servidores aprovechando entornos estáticos globales de alta disponibilidad.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
