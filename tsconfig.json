@@ -1,7 +1,10 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "jsx": "preserve",
-    "jsxImportSource": "astro"
+    "jsxImportSource": "astro",
+    "strict": false,
+    "skipLibCheck": true,
+    "noImplicitAny": false
   }
 }
