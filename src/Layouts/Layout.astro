@@ -1,0 +1,29 @@
+---
+// src/layouts/Layout.astro
+import Logo from '../components/Logo.astro'; // Importamos tu logo vectorizado
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Centrípeta Marketing - Tu aliado estratégico." } = Astro.props;
+---
+
+<!-- ... (El resto del head se mantiene igual) ... -->
+<body>
+	<header class="navbar">
+		<div class="container nav-container">
+			<!-- Reemplazamos el texto plano por tu nuevo componente de logo funcional -->
+			<a href="/" class="logo-link">
+				<Logo />
+			</a>
+			<nav class="nav-menu">
+				<a href="/">Home</a>
+				<a href="/nosotros">Nosotros</a>
+				<a href="/blog">Blog</a>
+				<a href="/contacto" class="btn-nav">Contacto</a>
+			</nav>
+		</div>
+	</header>
+<!-- ... -->
