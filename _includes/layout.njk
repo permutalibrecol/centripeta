@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Centrípeta Marketing</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #09090b;
+            --surface: #141416;
+            --primary: #ffffff;
+            --accent: #3b82f6;
+            --accent-lime: #a3e635;
+            --text-muted: #a1a1aa;
+            --border: #27272a;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--primary); min-height: 100vh; display: flex; flex-direction: column; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; width: 100%; }
+        
+        /* Navbar Futurista */
+        .navbar { background: rgba(9, 9, 11, 0.75); backdrop-filter: blur(16px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
+        .nav-container { height: 85px; display: flex; justify-content: space-between; align-items: center; }
+        .brand-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 42px; height: 42px; }
+        .logo-text { font-size: 1.5rem; font-weight: 700; color: var(--primary); letter-spacing: -0.03em; }
+        .nav-menu a { text-decoration: none; color: var(--text-muted); font-weight: 500; margin-left: 2rem; font-size: 0.95rem; transition: color 0.2s; }
+        .nav-menu a:hover { color: var(--primary); }
+        .nav-menu .btn-nav { background: var(--primary); color: var(--bg); padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: 600; }
+        .nav-menu .btn-nav:hover { background: var(--accent); color: var(--primary); }
+
+        main { flex-grow: 1; }
+
+        /* Footer */
+        .footer { padding: 5rem 0 3rem; background: var(--surface); border-top: 1px solid var(--border); }
+        .footer-container { display: flex; flex-direction: column; gap: 2.5rem; text-align: center; }
+        .email-link { font-size: 1.5rem; color: var(--accent); font-weight: 700; text-decoration: none; letter-spacing: -0.02em; }
+        .footer-legal { border-top: 1px solid var(--border); padding-top: 2rem; font-size: 0.85rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 1rem; }
+        .legal-links { display: flex; justify-content: center; gap: 2rem; }
+        .legal-links a { color: var(--text-muted); text-decoration: none; }
+        .legal-links a:hover { color: var(--accent-lime); }
+        @media (max-width: 640px) { .nav-menu { display: none; } .legal-links { flex-direction: column; gap: 0.75rem; } }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="/centripeta/" class="brand-logo">
+                <svg viewBox="0 0 120 100" class="logo-icon" xmlns="http://w3.org">
+                    <path d="M 20,50 A 30,30 0 1,1 80,50" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+                    <path d="M 15,50 C 15,75 35,80 50,80 C 65,80 85,75 85,50 Z" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" />
+                    <path d="M 15,55 C 5,55 5,70 15,70" fill="none" stroke="#ffffff" stroke-width="3" />
+                    <path d="M 30,88 L 70,88" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+                    <path d="M 52,56 L 46,67 L 51,67 L 48,76 L 56,65 L 51,65 Z" fill="#a3e635" />
+                    <path d="M 50,50 C 50,30 65,25 72,15" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+                    <g transform="translate(67, 5) rotate(25)">
+                        <path d="M 6,0 C 10,6 10,14 8,20 L 4,20 C 2,14 2,6 6,0 Z" fill="#a3e635" />
+                    </g>
+                </svg>
+                <span class="logo-text">Centrípeta</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="/centripeta/">Home</a>
+                <a href="/centripeta/nosotros/">Nosotros</a>
+                <a href="/centripeta/blog/">Blog</a>
+                <a href="/centripeta/contacto/" class="btn-nav">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-contact">
+                <p style="color: var(--text-muted); margin-bottom: 0.5rem;">Contacto directo:</p>
+                <a href="mailto:agenciacentripeta@gmail.com" class="email-link">agenciacentripeta@gmail.com</a>
+            </div>
+            <div class="footer-legal">
+                <p>&reg; Centrípeta. Todos los derechos reservados 2024 - 2026</p>
+                <div class="legal-links">
+                    <a href="/centripeta/politica-privacidad/">Política de Privacidad</a>
+                    <a href="/centripeta/politica-cookies/">Política de cookies</a>
+                    <a href="/centripeta/aviso-legal/">Aviso legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
