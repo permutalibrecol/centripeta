@@ -3,89 +3,178 @@ layout: layout.njk
 title: Vitrina de Soluciones Digitales Premium
 ---
 <style>
-    .hero-section { padding: 9rem 0 6rem; background: radial-gradient(circle at 80% 20%, #1e3a8a 0%, #09090b 70%); text-align: center; }
-    .hero-content { max-width: 850px; margin: 0 auto; }
-    .hero-tag { font-size: 0.8rem; font-weight: 700; color: var(--accent-lime); text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; margin-bottom: 1rem; }
-    .hero-content h1 { font-size: 3.5rem; font-weight: 700; line-height: 1.15; letter-spacing: -0.04em; margin-bottom: 1.5rem; }
-    .hero-content h1 span { color: var(--accent); }
-    .hero-content p { font-size: 1.25rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 3rem; }
+    /* Efecto de Entrada Animada */
+    .hero-section { 
+        padding: 10rem 0 6rem; 
+        text-align: center; 
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
     
-    .stats-section { padding: 3rem 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .grid-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; text-align: center; }
-    .stat-number { display: block; font-size: 2.5rem; font-weight: 700; color: var(--accent-lime); margin-bottom: 0.25rem; }
-    .stat-label { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 
-    .portfolio-section { padding: 7rem 0 9rem; }
-    .section-title { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 4rem; }
+    .hero-logo-box {
+        margin-bottom: 2rem;
+        display: inline-block;
+        animation: spinGlow 6s infinite linear;
+    }
+    
+    .hero-content h1 { 
+        font-size: 3.8rem; 
+        font-weight: 700; 
+        line-height: 1.1; 
+        letter-spacing: -0.04em; 
+        margin-bottom: 1.5rem; 
+    }
+    .hero-content h1 span { 
+        background: linear-gradient(to right, #3b82f6, #a3e635);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .hero-content p { font-size: 1.3rem; line-height: 1.6; color: var(--text-muted); max-width: 780px; margin: 0 auto 3.5rem; }
+    
+    /* Panel de Estadísticas Neumórficas */
+    .stats-section { padding: 3.5rem 0; background: rgba(17, 24, 39, 0.4); backdrop-filter: blur(10px); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .grid-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center; }
+    .stat-number { display: block; font-size: 2.8rem; font-weight: 700; color: var(--accent-lime); text-shadow: 0 0 15px rgba(163,230,53,0.3); }
+    .stat-label { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* Galería de Portafolio de Cristal */
+    .portfolio-section { padding: 8rem 0 10rem; }
+    .section-title-block { margin-bottom: 5rem; text-align: left; }
+    .section-title-block h2 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; }
+    .divider { width: 60px; height: 4px; background: linear-gradient(to right, var(--accent), var(--accent-lime)); margin-top: 1rem; border-radius: 2px; }
+    
     .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
     
-    /* Cristalografía UI */
-    .project-card { background: var(--surface); border-radius: 20px; border: 1px solid var(--border); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 320px; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s; }
-    .project-card:hover { transform: translateY(-8px); border-color: var(--accent); box-shadow: 0 30px 40px -15px rgba(59, 130, 246, 0.15); }
+    /* Cristalografía UI Avanzada (Glassmorphism) */
+    .project-card { 
+        background: var(--surface); 
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 24px; 
+        border: 1px solid var(--border); 
+        padding: 2.2rem; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: space-between; 
+        min-height: 340px; 
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
+    }
+    
+    .project-card:hover { 
+        transform: translateY(-10px) scale(1.02); 
+        border-color: rgba(255, 255, 255, 0.2); 
+        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.2); 
+    }
+    
     .card-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
-    .tech-badge { font-size: 0.7rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
-    .badge-app { color: #0891b2; background-color: rgba(8, 145, 178, 0.15); border: 1px solid rgba(8, 145, 178, 0.3); }
-    .badge-astro { color: #818cf8; background-color: rgba(129, 140, 248, 0.15); border: 1px solid rgba(129, 140, 248, 0.3); }
-    .badge-gsites { color: #fbbf24; background-color: rgba(251, 191, 36, 0.15); border: 1px solid rgba(251, 191, 36, 0.3); }
+    .tech-badge { font-size: 0.7rem; font-weight: 700; padding: 0.35rem 0.85rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
+    
+    .badge-app { color: #22d3ee; background: rgba(34, 211, 238, 0.1); border: 1px solid rgba(34, 211, 238, 0.2); }
+    .badge-astro { color: #818cf8; background: rgba(129, 140, 248, 0.1); border: 1px solid rgba(129, 140, 248, 0.2); }
+    .badge-gsites { color: #fbbf24; background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.2); }
+    
     .client-name { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
-    .project-body h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.25; }
+    .project-body h3 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.8rem; line-height: 1.25; color: white; }
     .project-body p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem; }
-    .btn-project-link { text-decoration: none; color: var(--accent-lime); font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; }
-    .btn-project-link:hover { color: var(--primary); }
+    
+    .btn-project-link { 
+        text-decoration: none; 
+        color: var(--accent-lime); 
+        font-weight: 600; 
+        font-size: 0.95rem; 
+        display: inline-flex; 
+        align-items: center; 
+        gap: 0.5rem;
+        transition: transform 0.2s;
+    }
+    .project-card:hover .btn-project-link { transform: translateX(5px); color: white; }
 </style>
 
 <section class="hero-section">
     <div class="container">
         <div class="hero-content">
-            <span class="hero-tag">Estudio de Ingeniería Digital</span>
-            <h1>Ecosistemas Web Impecables de <span>Alto Rendimiento</span></h1>
-            <p>Diseñamos y programamos arquitecturas digitales robustas enfocadas en la velocidad de conversión extrema. Elevamos marcas comerciales mediante código limpio y optimizado.</p>
+            <div class="hero-logo-box">
+                <svg viewBox="0 0 120 100" style="width: 80px; height: 80px;" xmlns="http://w3.org">
+                    <path d="M 20,50 A 30,30 0 1,1 80,50" fill="none" stroke="#3b82f6" stroke-width="4" />
+                    <path d="M 15,50 C 15,75 35,80 50,80 C 65,80 85,75 85,50 Z" fill="none" stroke="#ffffff" stroke-width="5" />
+                    <path d="M 52,56 L 46,67 L 51,67 L 48,76 L 56,65 L 51,65 Z" fill="#a3e635" />
+                </svg>
+            </div>
+            <h1>Ecosistemas Digitales Impecables de <span>Alto Rendimiento</span></h1>
+            <p>Desarrollamos arquitecturas web avanzadas y estrategias de conversión extrema. Elevamos la infraestructura de tu marca con velocidades de carga inferiores a 0.5 segundos.</p>
         </div>
     </div>
 </section>
 
 <section class="stats-section">
     <div class="container grid-stats">
-        <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Disponibilidad Cloud Estática</span></div>
-        <div class="stat-item"><span class="stat-number">&lt; 0.5s</span><span class="stat-label">Tiempo de Respuesta</span></div>
-        <div class="stat-item"><span class="stat-number">0$</span><span class="stat-label">Mantenimiento de Servidores</span></div>
-        <div class="stat-item"><span class="stat-number">5+</span><span class="stat-label">Plataformas Activas</span></div>
+        <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Disponibilidad Cloud</span></div>
+        <div class="stat-item"><span class="stat-number">&lt; 0.5s</span><span class="stat-label">Carga de Interfaz</span></div>
+        <div class="stat-item"><span class="stat-number">0$</span><span class="stat-label">Costo de Servidores</span></div>
+        <div class="stat-item"><span class="stat-number">5+</span><span class="stat-label">Casos Activos</span></div>
     </div>
 </section>
 
 <section class="portfolio-section">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title-block">
             <h2>Selected work</h2>
             <div class="divider"></div>
         </div>
         
         <div class="portfolio-grid">
+            <!-- Cliente 1 -->
             <div class="project-card">
-                <div class="card-meta"><span class="tech-badge badge-app">Plataforma Fintech</span><span class="client-name">Permuta Libre</span></div>
+                <div class="card-meta"><span class="tech-badge badge-app">Aplicación Web Fintech</span><span class="client-name">Permuta Libre</span></div>
                 <div class="project-body">
-                    <h3>Retiros Cripto a Efectivo P2P</h3>
-                    <p>Pasarela financiera transaccional para intercambio seguro de activos digitales (BTC, ETH, USDC) a efectivo físico en Bogotá y Chía sin fricción bancaria.</p>
+                    <h3>Pasarela Cripto a Efectivo</h3>
+                    <p>Infraestructura transaccional robusta para el retiro de criptoactivos (BTC, ETH, USDC) a efectivo físico en Bogotá y Chía mediante validaciones P2P seguras.</p>
                 </div>
-                <a href="https://permutalibre.com.co" target="_blank" class="btn-project-link">Explorar Plataforma &rarr;</a>
+                <a href="https://permutalibre.com.co" target="_blank" class="btn-project-link">Visitar Plataforma &rarr;</a>
             </div>
 
+            <!-- Cliente 2 -->
             <div class="project-card">
-                <div class="card-meta"><span class="tech-badge badge-astro">Infraestructura Crítica</span><span class="client-name">Vanguard Supply USA</span></div>
+                <div class="card-meta"><span class="tech-badge badge-astro">Desarrollo Corporativo</span><span class="client-name">Vanguard Supply USA</span></div>
                 <div class="project-body">
                     <h3>Portal Industrial Global ASME</h3>
-                    <p>Ecosistema de distribución de ingeniería pesada internacional. Incluye un motor corporativo de cotizaciones RFQ técnicas con enrutamiento inteligente.</p>
+                    <p>Plataforma internacional de distribución logística para infraestructura crítica. Incorpora pasarela automatizada de cotizaciones técnicas RFQ.</p>
                 </div>
-                <a href="https://dsvanguard.com" target="_blank" class="btn-project-link">Explorar Plataforma &rarr;</a>
+                <a href="https://dsvanguard.com" target="_blank" class="btn-project-link">Visitar Plataforma &rarr;</a>
             </div>
 
+            <!-- Cliente 3 -->
             <div class="project-card">
-                <div class="card-meta"><span class="tech-badge badge-gsites">Optimización Local</span><span class="client-name">TuFisioOficial</span></div>
+                <div class="card-meta"><span class="tech-badge badge-gsites">Google Sites Cloud</span><span class="client-name">TuFisioOficial</span></div>
                 <div class="project-body">
-                    <h3>Fisioterapia Médica Domiciliaria</h3>
-                    <p>Landing page de servicios de salud en Bogotá estructurada para la captación masiva de pacientes mediante embudos de conversión directa a WhatsApp.</p>
+                    <h3>Salud y Fisioterapia Domiciliaria</h3>
+                    <p>Landing page médica en Bogotá optimizada para conversiones orgánicas ágiles. Cuenta con embudo de alta retención directo a canales de WhatsApp.</p>
                 </div>
-                <a href="https://tufisiooficial.com" target="_blank" class="btn-project-link">Explorar Plataforma &rarr;</a>
+                <a href="https://tufisiooficial.com" target="_blank" class="btn-project-link">Visitar Plataforma &rarr;</a>
+            </div>
+
+            <!-- Cliente 4 -->
+            <div class="project-card">
+                <div class="card-meta"><span class="tech-badge badge-gsites">E-Commerce Ágil</span><span class="client-name">Aliméntate Saludable Hoy</span></div>
+                <div class="project-body">
+                    <h3>Tienda de Nutrición Integral</h3>
+                    <p>Catálogo digital modular para la venta de suplementos y asesorías de bienestar. Integra pasarela fluida con confirmación instantánea de pedidos.</p>
+                </div>
+                <a href="https://alimentatesaludablehoy.com" target="_blank" class="btn-project-link">Visitar Plataforma &rarr;</a>
+            </div>
+
+            <!-- Cliente 5 -->
+            <div class="project-card">
+                <div class="card-meta"><span class="tech-badge badge-gsites">Estructura Corporativa</span><span class="client-name">Doctores Salvatierra</span></div>
+                <div class="project-body">
+                    <h3>Portal Clínico de Radiología Avanzada</h3>
+                    <p>Sitio corporativo médico especializado para un centro de imágenes diagnósticas líder en Costa Rica. Organiza el catálogo completo de TAC y ultrasonidos.</p>
+                </div>
+                <a href="https://doctoressalvatierra.com" target="_blank" class="btn-project-link">Visitar Plataforma &rarr;</a>
             </div>
         </div>
     </div>
