@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrípeta Marketing | Vitrina de Soluciones Digitales</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --background: #ffffff;
+            --surface: #f8fafc;
+            --text: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--background); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        
+        /* Navbar con Logo Vectorial */
+        .navbar { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
+        .nav-container { height: 80px; display: flex; justify-content: space-between; align-items: center; }
+        .brand-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
+        .logo-icon { width: 45px; height: 45px; }
+        .logo-text { font-size: 1.65rem; font-weight: 700; color: var(--primary); letter-spacing: -0.02em; }
+        
+        /* Hero */
+        .hero-section { padding: 8rem 0 5rem; background: radial-gradient(circle at 90% 10%, #eff6ff 0%, #ffffff 60%); }
+        .hero-content { max-width: 800px; }
+        .hero-content h2 { font-size: 2.8rem; font-weight: 700; color: var(--primary); line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+        .hero-content h2 span { color: var(--accent); }
+        .hero-content p { font-size: 1.2rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 2.5rem; }
+        
+        /* Grid de Casos de Éxito */
+        .portfolio-section { padding: 6rem 0 8rem; }
+        .section-title-block { margin-bottom: 4rem; }
+        .section-title-block h2 { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .divider { width: 50px; height: 4px; background: var(--accent); margin-top: 1rem; border-radius: 2px; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+        
+        /* Tarjetas */
+        .project-card { background: #ffffff; border-radius: 16px; border: 1px solid var(--border); padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 280px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01); }
+        .tech-badge { align-self: flex-start; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 9999px; text-transform: uppercase; margin-bottom: 1rem; }
+        .badge-app { color: #0891b2; background-color: #ecfeff; }
+        .badge-astro { color: #4f46e5; background-color: #e0e7ff; }
+        .badge-gsites { color: #d97706; background-color: #fef3c7; }
+        .project-body h3 { font-size: 1.35rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; }
+        .project-body p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.5rem; }
+        .btn-project-link { text-decoration: none; color: var(--accent); font-weight: 600; }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <svg viewBox="0 0 120 100" class="logo-icon" xmlns="http://w3.org">
+                    <path d="M 20,50 A 30,30 0 1,1 80,50" fill="none" stroke="#1e293b" stroke-width="3" />
+                    <path d="M 15,50 C 15,75 35,80 50,80 C 65,80 85,75 85,50 Z" fill="none" stroke="#1e293b" stroke-width="4" />
+                    <path d="M 15,55 C 5,55 5,70 15,70" fill="none" stroke="#1e293b" stroke-width="3" />
+                    <path d="M 30,88 L 70,88" stroke="#1e293b" stroke-width="4" />
+                    <path d="M 52,56 L 46,67 L 51,67 L 48,76 L 56,65 L 51,65 Z" fill="#a3e635" />
+                    <path d="M 50,50 C 50,30 65,25 72,15" fill="none" stroke="#1e293b" stroke-width="2.5" />
+                    <g transform="translate(67, 5) rotate(25)">
+                        <path d="M 6,0 C 10,6 10,14 8,20 L 4,20 C 2,14 2,6 6,0 Z" fill="#a3e635" />
+                    </g>
+                </svg>
+                <span class="logo-text">Centrípeta</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Soluciones Digitales de <span>Alto Rendimiento</span></h2>
+                    <p>Transformamos visiones comerciales en plataformas estables. Diseñamos ecosistemas eficientes desde aplicaciones fintech y arquitecturas estáticas rápidas hasta landing pages ágiles en la nube.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <div class="container">
+                <div class="section-title-block">
+                    <h2>Selected work</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="portfolio-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="project-card">
+                        <span class="tech-badge badge-app">Aplicación Web</span>
+                        <div class="project-body">
+                            <h3>Permuta Libre Colombia</h3>
+                            <p>Pasarela financiera para el retiro de criptoactivos (BTC, ETH, USDC) a efectivo físico en Bogotá y Chía con validación P2P.</p>
+                        </div>
+                        <a href="https://permutalibre.com.co" target="_blank" class="btn-project-link">Visitar Sitio &rarr;</a>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="project-card">
+                        <span class="tech-badge badge-astro">Desarrollo Premium</span>
+                        <div class="project-body">
+                            <h3>Vanguard Supply USA</h3>
+                            <p>Plataforma internacional de distribución industrial para infraestructura crítica con portal corporativo de cotizaciones RFQ.</p>
+                        </div>
+                        <a href="https://dsvanguard.com" target="_blank" class="btn-project-link">Visitar Sitio &rarr;</a>
+                    </div>
+                    <!-- Tarjeta 3 -->
+                    <div class="project-card">
+                        <span class="tech-badge badge-gsites">Google Sites Cloud</span>
+                        <div class="project-body">
+                            <h3>TuFisioOficial</h3>
+                            <p>Landing page de servicios de salud domiciliarios en Bogotá optimizada para conversiones con embudo directo a WhatsApp.</p>
+                        </div>
+                        <a href="https://tufisiooficial.com" target="_blank" class="btn-project-link">Visitar Sitio &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
