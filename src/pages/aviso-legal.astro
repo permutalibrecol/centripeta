@@ -1,1 +1,80 @@
+---
+// Código dinámico para páginas legales de Centrípeta Marketing
+import Layout from '../layouts/Layout.astro';
+
+const currentPath = Astro.url.pathname;
+let pageTitle = "Documento Legal";
+let legalContent = {};
+
+if (currentPath.includes('aviso-legal')) {
+	pageTitle = "Aviso Legal";
+	legalContent = {
+		subtitle: "Términos y condiciones de uso de la plataforma",
+		section1: "1. Identificación del Titular",
+		text1: "En cumplimiento con los estándares de transparencia digital, se establece que este portafolio es de propiedad exclusiva de Centrípeta Marketing, con correo de contacto operativo: agenciacentripeta@gmail.com.",
+		section2: "2. Propiedad Intelectual",
+		text2: "Todo el código fuente, la vectorización del logotipo y las descripciones de los casos de éxito de nuestros 5 clientes estrella presentados en esta web están protegidos por derechos de autor corporativos."
+	};
+} else if (currentPath.includes('politica-privacidad')) {
+	pageTitle = "Política de Privacidad";
+	legalContent = {
+		subtitle: "Tratamiento confidencial de tus datos de contacto",
+		section1: "1. Recopilación de Datos",
+		text1: "A través de nuestro formulario de contacto estratégico desarrollado en Astro, únicamente recopilamos tu nombre, correo electrónico y detalles del proyecto con el único fin de redactar tu cotización a medida.",
+		section2: "2. Almacenamiento Seguro",
+		text2: "No compartimos, vendemos ni transferimos tu información a terceros. Tus datos se procesan exclusivamente para la comunicación comercial entre la agencia y tu empresa."
+	};
+} else {
+	pageTitle = "Política de Cookies";
+	legalContent = {
+		subtitle: "Uso de tecnologías de optimización web",
+		section1: "1. ¿Qué son las cookies?",
+		text1: "Esta plataforma está construida sobre una arquitectura estática ultra rápida que reduce al mínimo el uso de scripts. No utilizamos cookies de rastreo invasivas para el usuario.",
+		section2: "2. Cookies Técnicas",
+		text2: "Únicamente se pueden emplear cookies técnicas esenciales para garantizar que la navegación entre páginas como el Blog, Nosotros y el Portafolio sea fluida e inmediata."
+	};
+}
+---
+
+<Layout title={`${pageTitle} | Centrípeta Marketing`}>
+	<section class="legal-layout">
+		<div class="container container-narrow">
+			<span class="legal-tag">Ecosistema Seguro</span>
+			<h1>{pageTitle}</h1>
+			<p class="subtitle">{legalContent.subtitle}</p>
+			<p class="date">Última actualización: {new Date().toLocaleDateString('es-ES')}</p>
+			
+			<div class="legal-body">
+				<h2>{legalContent.section1}</h2>
+				<p>{legalContent.text1}</p>
+				
+				<h2>{legalContent.section2}</h2>
+				<p>{legalContent.text2}</p>
+				
+				<h2>3. Cumplimiento Normativo</h2>
+				<p>Nos aseguramos de que cada desarrollo cumpla estrictamente con las directrices de optimización y transparencia de datos para proteger la integridad digital de tu marca.</p>
+			</div>
+
+			<div class="legal-footer">
+				<a href="/" class="btn-back">&larr; Volver al Inicio</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.legal-layout { padding: 8rem 0; background: #ffffff; min-height: 80vh; }
+	.container-narrow { max-width: 700px; margin: 0 auto; }
+	.legal-tag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--accent); letter-spacing: 0.05em; display: inline-block; margin-bottom: 0.5rem; }
+	h1 { font-size: 2.5rem; color: var(--primary); font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+	.subtitle { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 0.5rem; font-weight: 500; }
+	.date { font-size: 0.85rem; color: var(--text-muted); border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+	
+	.legal-body h2 { font-size: 1.35rem; color: var(--primary); font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; }
+	.legal-body p { color: var(--text-muted); line-height: 1.7; font-size: 1rem; margin-bottom: 1.5rem; }
+	
+	.legal-footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+	.btn-back { text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+	.btn-back:hover { color: var(--primary); }
+</style>
 
