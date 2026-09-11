@@ -1,0 +1,51 @@
+---
+layout: layout.njk
+title: Blog & Insights
+---
+<style>
+	.blog-hero { padding: 8rem 0 4rem; background: var(--surface); border-bottom: 1px solid var(--border); }
+	.blog-hero h1 { font-size: 2.8rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem; }
+	.blog-hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 750px; }
+	.blog-list-section { padding: 5rem 0; }
+	.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+	.post-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 340px; }
+	.post-header { display: flex; justify-content: space-between; margin-bottom: 1.5rem; }
+	.post-badge { font-size: 0.75rem; font-weight: 700; background: var(--bg); color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 6px; border: 1px solid var(--border); }
+	.post-date { font-size: 0.85rem; color: var(--accent); font-weight: 600; display: block; margin-bottom: 0.5rem; }
+	.post-body h2 { font-size: 1.4rem; font-weight: 700; color: var(--primary); margin-bottom: 0.75rem; }
+	.post-body p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+	.btn-read-more { text-decoration: none; color: var(--accent-lime); font-weight: 600; }
+</style>
+
+<section class="blog-hero">
+	<div class="container">
+		<h1>Insights y Estrategia Digital</h1>
+		<p>Compartimos metodologías claras sobre cómo crear interfaces de alto rendimiento que transforman visitas en facturación.</p>
+	</div>
+</section>
+
+<section class="blog-list-section">
+	<div class="container">
+		<div class="blog-grid">
+			<article class="post-card">
+				<div class="post-header"><span class="post-badge">Desarrollo Web</span></div>
+				<div class="post-body">
+					<span class="post-date">Septiembre 2026</span>
+					<h2>Por qué la velocidad de carga define el éxito de tus ventas digitales</h2>
+					<p>Analizamos el impacto financiero que tiene un sitio lento en tu tasa de conversión y cómo solucionarlo con arquitecturas estáticas eficientes.</p>
+				</div>
+				<a href="#" class="btn-read-more">Leer artículo completo &rarr;</a>
+			</article>
+
+			<article class="post-card">
+				<div class="post-header"><span class="post-badge">Fintech & Apps</span></div>
+				<div class="post-body">
+					<span class="post-date">Agosto 2026</span>
+					<h2>Seguridad y Conversión en Plataformas Transaccionales</h2>
+					<p>Cómo estructurar interfaces confiables para intercambio de activos sin sobrecargar la experiencia del usuario final.</p>
+				</div>
+				<a href="#" class="btn-read-more">Leer artículo completo &rarr;</a>
+			</article>
+		</div>
+	</div>
+</section>
