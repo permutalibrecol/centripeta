@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ] # Ejecuta el despliegue al empujar cambios a la rama principal
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -13,12 +13,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
-        # No necesitas configurar Node.js ni paquetes a mano, la acción oficial de Astro lo hace todo
+      - name: Setup Node.js (Latest v24)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Astro Project
+        run: npm run build
+
+      - name: Upload production artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
   deploy:
     needs: build
