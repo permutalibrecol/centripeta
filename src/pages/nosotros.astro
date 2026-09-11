@@ -1,1 +1,168 @@
+---
+// src/pages/nosotros.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre Nosotros | Centrípeta Marketing" description="Conoce la metodología detrás de la aceleración digital de nuestros clientes. Creamos arquitecturas web eficientes y de alto rendimiento.">
+	<!-- Hero de la Sección -->
+	<section class="page-hero">
+		<div class="container">
+			<span class="hero-subtitle">Ingeniería & Estrategia Digital</span>
+			<h1>El Motor Detrás de tu Rendimiento Digital</h1>
+			<p>En Centrípeta Marketing no construimos plantillas genéricas. Desarrollamos soluciones digitales nativas orientadas a la velocidad de conversión y la eficiencia en la nube.</p>
+		</div>
+	</section>
+
+	<!-- Bloque Metodológico Principal -->
+	<section class="methodology-section">
+		<div class="container grid-two">
+			<div class="text-block">
+				<h2>Nuestra Filosofía Operativa</h2>
+				<p>Entendemos que el mercado digital moderno no perdona las interfaces lentas ni las caídas de sistema. Por eso, ayudamos a empresas y profesionales independientes a migrar sus ecosistemas a infraestructuras óptimas.</p>
+				<p>Desde plataformas de distribución industrial global hasta pasarelas complejas de intercambio transaccional Fintech y catálogos médicos locales integrados con WhatsApp; nuestra prioridad absoluta es la estabilidad y la velocidad del usuario final.</p>
+			</div>
+			
+			<div class="pillars-grid">
+				<div class="pillar-item">
+					<div class="pillar-icon">⚡</div>
+					<div class="pillar-info">
+						<h3>Arquitectura Jamstack & Astro</h3>
+						<p>Eliminamos la sobrecarga de JavaScript innecesario entregando HTML puro y optimizado para búsquedas orgánicas.</p>
+					</div>
+				</div>
+				
+				<div class="pillar-item">
+					<div class="pillar-icon">☁️</div>
+					<div class="pillar-info">
+						<h3>Optimización de Costos Cloud</h3>
+						<p>Diseñamos plataformas eficientes aprovechando entornos estáticos y herramientas sin mantenimiento de servidor para reducir tus costos a $0 mensuales.</p>
+					</div>
+				</div>
+
+				<div class="pillar-item">
+					<div class="pillar-icon">🎯</div>
+					<div class="pillar-info">
+						<h3>Enfoque en Conversión Real</h3>
+						<p>Cada menú, formulario de cotización técnica o pasarela está estructurado siguiendo principios estrictos de UI/UX para cerrar ventas rápidamente.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Sección de Compromiso y Resultados -->
+	<section class="manifesto-section">
+		<div class="container text-center">
+			<div class="manifesto-box">
+				<h2>Por Qué Confiar en Nuestro Enfoque</h2>
+				<p class="lead">Hemos estructurado y gestionado con éxito ecosistemas comerciales para marcas internacionales en Estados Unidos, clínicas médicas líderes en Costa Rica, y startups Fintech disruptivas en Bogotá y Chía.</p>
+				<div class="action-footer">
+					<a href="/contacto" class="btn-cta-light">Desarrollar mi Plataforma</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.page-hero { 
+		padding: 8rem 0 4rem; 
+		background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%); 
+		text-align: center;
+		border-bottom: 1px solid var(--border);
+	}
+	.hero-subtitle {
+		font-size: 0.8rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: var(--accent);
+		letter-spacing: 0.05em;
+		display: inline-block;
+		margin-bottom: 0.75rem;
+	}
+	.page-hero h1 { 
+		font-size: 2.8rem; 
+		color: var(--primary); 
+		margin-bottom: 1rem; 
+		font-weight: 700; 
+		letter-spacing: -0.03em;
+		line-height: 1.2;
+	}
+	.page-hero p { 
+		font-size: 1.2rem; 
+		color: var(--text-muted); 
+		max-width: 750px; 
+		margin: 0 auto; 
+		line-height: 1.6;
+	}
+	
+	/* Contenido y Pilares */
+	.methodology-section { padding: 6rem 0; }
+	.grid-two { 
+		display: grid; 
+		grid-template-columns: 1fr 1.2fr; 
+		gap: 5rem; 
+		align-items: center; 
+	}
+	
+	.text-block h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--primary); font-weight: 700; letter-spacing: -0.02em; }
+	.text-block p { color: var(--text-muted); line-height: 1.7; font-size: 1.05rem; margin-bottom: 1.25rem; }
+	
+	.pillars-grid { display: flex; flex-direction: column; gap: 2rem; }
+	.pillar-item { 
+		display: flex; 
+		gap: 1.5rem; 
+		background: #ffffff; 
+		padding: 1.5rem; 
+		border-radius: 16px; 
+		border: 1px solid var(--border); 
+		transition: border-color 0.2s ease;
+	}
+	.pillar-item:hover {
+		border-color: var(--accent);
+	}
+	.pillar-icon { 
+		font-size: 2rem; 
+		background: var(--surface); 
+		padding: 0.5rem; 
+		border-radius: 12px; 
+		height: fit-content;
+		border: 1px solid var(--border);
+	}
+	.pillar-info h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--primary); font-weight: 700; }
+	.pillar-info p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+	
+	/* Manifiesto Box */
+	.manifesto-section { padding-bottom: 8rem; }
+	.text-center { text-align: center; }
+	.manifesto-box {
+		background: var(--surface);
+		border: 1px solid var(--border);
+		padding: 4rem 2rem;
+		border-radius: 24px;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+	.manifesto-box h2 { font-size: 2rem; color: var(--primary); font-weight: 700; margin-bottom: 1rem; }
+	.manifesto-box .lead { font-size: 1.2rem; color: var(--text-muted); line-height: 1.7; max-width: 750px; margin: 0 auto 2.5rem; }
+	
+	.btn-cta-light {
+		text-decoration: none;
+		background: var(--primary);
+		color: #ffffff;
+		padding: 0.8rem 2rem;
+		border-radius: 8px;
+		font-weight: 600;
+		display: inline-block;
+		transition: background 0.2s ease;
+	}
+	.btn-cta-light:hover {
+		background: var(--accent);
+	}
+
+	@media (max-width: 960px) {
+		.grid-two { grid-template-columns: 1fr; gap: 3rem; }
+		.page-hero h1 { font-size: 2.2rem; }
+	}
+</style>
 
