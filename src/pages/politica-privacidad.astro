@@ -1,10 +1,18 @@
 ---
-// Código dinámico para páginas legales de Centrípeta Marketing
+// Código dinámico corregido para páginas legales
 import Layout from '../layouts/Layout.astro';
 
 const currentPath = Astro.url.pathname;
 let pageTitle = "Documento Legal";
-let legalContent = {};
+
+// Inicialización con propiedades definidas para evitar errores del compilador
+let legalContent = {
+	subtitle: "Información legal del ecosistema",
+	section1: "1. Información General",
+	text1: "Detalles en proceso de revisión.",
+	section2: "2. Términos de Uso",
+	text2: "Contenido bajo los lineamientos de la agencia."
+};
 
 if (currentPath.includes('aviso-legal')) {
 	pageTitle = "Aviso Legal";
@@ -24,7 +32,7 @@ if (currentPath.includes('aviso-legal')) {
 		section2: "2. Almacenamiento Seguro",
 		text2: "No compartimos, vendemos ni transferimos tu información a terceros. Tus datos se procesan exclusivamente para la comunicación comercial entre la agencia y tu empresa."
 	};
-} else {
+} else if (currentPath.includes('politica-cookies')) {
 	pageTitle = "Política de Cookies";
 	legalContent = {
 		subtitle: "Uso de tecnologías de optimización web",
@@ -77,4 +85,3 @@ if (currentPath.includes('aviso-legal')) {
 	.btn-back { text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.95rem; }
 	.btn-back:hover { color: var(--primary); }
 </style>
-
