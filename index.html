@@ -1,181 +1,247 @@
----
-layout: layout.njk
-title: Vitrina de Soluciones Digitales Premium
----
-<style>
-    /* Efecto de Entrada Animada */
-    .hero-section { 
-        padding: 10rem 0 6rem; 
-        text-align: center; 
-        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VORTEX Matrix | Enterprise Software & Digital Engineering</title>
+    <meta name="description" content="Desarrollo de software a medida, CRM corporativo y arquitectura digital de alto rendimiento.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); }
+        .gradient-text { background: linear-gradient(135deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+
+    <!-- SEO & GEO JSON-LD (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://vortex.co/#organization",
+          "name": "VORTEX Matrix",
+          "url": "https://vortex.co",
+          "logo": "https://vortex.co/assets/logo.png",
+          "description": "Enterprise software engineering, custom CRM architecture, and growth infrastructure.",
+          "subOrganization": {
+            "@type": "Organization",
+            "@id": "https://vortex.co/#centripeta",
+            "name": "Centrípeta Growth & Ads",
+            "description": "High-ticket user acquisition and paid media optimization."
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://vortex.co/#website",
+          "url": "https://vortex.co",
+          "name": "VORTEX Matrix",
+          "publisher": { "@id": "https://vortex.co/#organization" }
+        }
+      ]
     }
-    
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-white">
 
-    .hero-logo-box {
-        margin-bottom: 2rem;
-        display: inline-block;
-        animation: spinGlow 6s infinite linear;
-    }
-    
-    .hero-content h1 { 
-        font-size: 3.8rem; 
-        font-weight: 700; 
-        line-height: 1.1; 
-        letter-spacing: -0.04em; 
-        margin-bottom: 1.5rem; 
-    }
-    .hero-content h1 span { 
-        background: linear-gradient(to right, #3b82f6, #a3e635);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .hero-content p { font-size: 1.3rem; line-height: 1.6; color: var(--text-muted); max-width: 780px; margin: 0 auto 3.5rem; }
-    
-    /* Panel de Estadísticas Neumórficas */
-    .stats-section { padding: 3.5rem 0; background: rgba(17, 24, 39, 0.4); backdrop-filter: blur(10px); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .grid-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center; }
-    .stat-number { display: block; font-size: 2.8rem; font-weight: 700; color: var(--accent-lime); text-shadow: 0 0 15px rgba(163,230,53,0.3); }
-    .stat-label { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-extrabold tracking-tight">
+                VORTEX<span class="text-cyan-400">.CO</span>
+            </a>
 
-    /* Galería de Portafolio de Cristal */
-    .portfolio-section { padding: 8rem 0 10rem; }
-    .section-title-block { margin-bottom: 5rem; text-align: left; }
-    .section-title-block h2 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.03em; }
-    .divider { width: 60px; height: 4px; background: linear-gradient(to right, var(--accent), var(--accent-lime)); margin-top: 1rem; border-radius: 2px; }
-    
-    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
-    
-    /* Cristalografía UI Avanzada (Glassmorphism) */
-    .project-card { 
-        background: var(--surface); 
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-radius: 24px; 
-        border: 1px solid var(--border); 
-        padding: 2.2rem; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: space-between; 
-        min-height: 340px; 
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
-    }
-    
-    .project-card:hover { 
-        transform: translateY(-10px) scale(1.02); 
-        border-color: rgba(255, 255, 255, 0.2); 
-        box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(59, 130, 246, 0.2); 
-    }
-    
-    .card-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
-    .tech-badge { font-size: 0.7rem; font-weight: 700; padding: 0.35rem 0.85rem; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; }
-    
-    .badge-app { color: #22d3ee; background: rgba(34, 211, 238, 0.1); border: 1px solid rgba(34, 211, 238, 0.2); }
-    .badge-astro { color: #818cf8; background: rgba(129, 140, 248, 0.1); border: 1px solid rgba(129, 140, 248, 0.2); }
-    .badge-gsites { color: #fbbf24; background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.2); }
-    
-    .client-name { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
-    .project-body h3 { font-size: 1.45rem; font-weight: 700; margin-bottom: 0.8rem; line-height: 1.25; color: white; }
-    .project-body p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem; }
-    
-    .btn-project-link { 
-        text-decoration: none; 
-        color: var(--accent-lime); 
-        font-weight: 600; 
-        font-size: 0.95rem; 
-        display: inline-flex; 
-        align-items: center; 
-        gap: 0.5rem;
-        transition: transform 0.2s;
-    }
-    .project-card:hover .btn-project-link { transform: translateX(5px); color: white; }
-</style>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                <a href="#services" class="hover:text-cyan-400 transition" data-i18n="nav_services">Servicios</a>
+                <a href="#cases" class="hover:text-cyan-400 transition" data-i18n="nav_cases">Casos de Éxito</a>
+                <a href="#about" class="hover:text-cyan-400 transition" data-i18n="nav_about">Nosotros</a>
+            </nav>
 
-<section class="hero-section">
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-logo-box">
-                <svg viewBox="0 0 120 100" style="width: 80px; height: 80px;" xmlns="http://w3.org">
-                    <path d="M 20,50 A 30,30 0 1,1 80,50" fill="none" stroke="#3b82f6" stroke-width="4" />
-                    <path d="M 15,50 C 15,75 35,80 50,80 C 65,80 85,75 85,50 Z" fill="none" stroke="#ffffff" stroke-width="5" />
-                    <path d="M 52,56 L 46,67 L 51,67 L 48,76 L 56,65 L 51,65 Z" fill="#a3e635" />
-                </svg>
-            </div>
-            <h1>Ecosistemas Digitales Impecables de <span>Alto Rendimiento</span></h1>
-            <p>Desarrollamos arquitecturas web avanzadas y estrategias de conversión extrema. Elevamos la infraestructura de tu marca con velocidades de carga inferiores a 0.5 segundos.</p>
-        </div>
-    </div>
-</section>
-
-<section class="stats-section">
-    <div class="container grid-stats">
-        <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Disponibilidad Cloud</span></div>
-        <div class="stat-item"><span class="stat-number">&lt; 0.5s</span><span class="stat-label">Carga de Interfaz</span></div>
-        <div class="stat-item"><span class="stat-number">0$</span><span class="stat-label">Costo de Servidores</span></div>
-        <div class="stat-item"><span class="stat-number">5+</span><span class="stat-label">Casos Activos</span></div>
-    </div>
-</section>
-
-<section class="portfolio-section">
-    <div class="container">
-        <div class="section-title-block">
-            <h2>Selected work</h2>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="portfolio-grid">
-            <!-- Cliente 1 -->
-            <div class="project-card">
-                <div class="card-meta"><span class="tech-badge badge-app">Aplicación Web Fintech</span><span class="client-name">Permuta Libre</span></div>
-                <div class="project-body">
-                    <h3>Pasarela Cripto a Efectivo</h3>
-                    <p>Infraestructura transaccional robusta para el retiro de criptoactivos (BTC, ETH, USDC) a efectivo físico en Bogotá y Chía mediante validaciones P2P seguras.</p>
-                </div>
-                <a href="https://permutalibre.com.co" target="_blank" class="btn-project-link">Visitar Plataforma &rarr;</a>
-            </div>
-
-            <!-- Cliente 2 -->
-            <div class="project-card">
-                <div class="card-meta"><span class="tech-badge badge-astro">Desarrollo Corporativo</span><span class="client-name">Vanguard Supply USA</span></div>
-                <div class="project-body">
-                    <h3>Portal Industrial Global ASME</h3>
-                    <p>Plataforma internacional de distribución logística para infraestructura crítica. Incorpora pasarela automatizada de cotizaciones técnicas RFQ.</p>
-                </div>
-                <a href="https://dsvanguard.com" target="_blank" class="btn-project-link">Visitar Plataforma &rarr;</a>
-            </div>
-
-            <!-- Cliente 3 -->
-            <div class="project-card">
-                <div class="card-meta"><span class="tech-badge badge-gsites">Google Sites Cloud</span><span class="client-name">TuFisioOficial</span></div>
-                <div class="project-body">
-                    <h3>Salud y Fisioterapia Domiciliaria</h3>
-                    <p>Landing page médica en Bogotá optimizada para conversiones orgánicas ágiles. Cuenta con embudo de alta retención directo a canales de WhatsApp.</p>
-                </div>
-                <a href="https://tufisiooficial.com" target="_blank" class="btn-project-link">Visitar Plataforma &rarr;</a>
-            </div>
-
-            <!-- Cliente 4 -->
-            <div class="project-card">
-                <div class="card-meta"><span class="tech-badge badge-gsites">E-Commerce Ágil</span><span class="client-name">Aliméntate Saludable Hoy</span></div>
-                <div class="project-body">
-                    <h3>Tienda de Nutrición Integral</h3>
-                    <p>Catálogo digital modular para la venta de suplementos y asesorías de bienestar. Integra pasarela fluida con confirmación instantánea de pedidos.</p>
-                </div>
-                <a href="https://alimentatesaludablehoy.com" target="_blank" class="btn-project-link">Visitar Plataforma &rarr;</a>
-            </div>
-
-            <!-- Cliente 5 -->
-            <div class="project-card">
-                <div class="card-meta"><span class="tech-badge badge-gsites">Estructura Corporativa</span><span class="client-name">Doctores Salvatierra</span></div>
-                <div class="project-body">
-                    <h3>Portal Clínico de Radiología Avanzada</h3>
-                    <p>Sitio corporativo médico especializado para un centro de imágenes diagnósticas líder en Costa Rica. Organiza el catálogo completo de TAC y ultrasonidos.</p>
-                </div>
-                <a href="https://doctoressalvatierra.com" target="_blank" class="btn-project-link">Visitar Plataforma &rarr;</a>
+            <!-- Language Selector Toggle Button -->
+            <div class="flex items-center space-x-4">
+                <button id="langToggle" class="flex items-center space-x-2 bg-slate-900 border border-slate-700 hover:border-cyan-500 px-3 py-1.5 rounded-full text-xs font-bold transition">
+                    <span id="langFlag">🇨🇴</span>
+                    <span id="langLabel">ES | EN</span>
+                </button>
+                
+                <a href="#contact" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-xs uppercase tracking-wider px-5 py-2.5 rounded-lg shadow-lg shadow-cyan-500/20 transition" data-i18n="btn_contact">
+                    Iniciar Proyecto
+                </a>
             </div>
         </div>
-    </div>
-</section>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="pt-36 pb-20 px-6 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center space-y-8">
+            <span class="inline-block bg-slate-900 border border-cyan-500/30 text-cyan-400 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest" data-i18n="hero_badge">
+                Ingeniería Digital & Software B2B
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight" data-i18n="hero_title">
+                Estructuramos Software a Medida & Sistemas de Tracción Masiva
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto font-light leading-relaxed" data-i18n="hero_desc">
+                Desarrollamos infraestructura tecnológica de alto rendimiento, plataformas CRM personalizadas y campañas de adquisición optimizadas bajo la división Centrípeta.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+                <a href="#cases" class="bg-slate-100 text-slate-900 font-bold px-8 py-3.5 rounded-xl hover:bg-white transition" data-i18n="hero_btn_cases">
+                    Ver Casos de Éxito
+                </a>
+                <a href="#services" class="border border-slate-700 hover:border-slate-500 font-semibold px-8 py-3.5 rounded-xl transition" data-i18n="hero_btn_tech">
+                    Nuestra Arquitectura
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section id="cases" class="py-20 px-6 bg-slate-900/50 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-3xl font-extrabold" data-i18n="cases_title">Casos de Éxito & Ecosistemas Desplegados</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-sm" data-i18n="cases_subtitle">
+                    Plataformas reales operando con altos estándares de velocidad, conversión y arquitectura segura.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Permuta Libre -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-cyan-500/50 transition flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-bold uppercase text-cyan-400 tracking-wider">Web3 & FinTech / RWA</span>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Permuta Libre</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-i18n="case_permuta_desc">
+                            Pasarela de intercambio inmobiliario y activos RWA con integración Cripto/FIAT y flujos de conversión de alta velocidad.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <a href="https://www.permutalibre.com.co" target="_blank" rel="noopener" class="text-cyan-400 hover:underline font-mono text-xs font-bold">
+                            www.permutalibre.com.co →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Aliméntate Sano -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-cyan-500/50 transition flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-bold uppercase text-emerald-400 tracking-wider">E-Commerce & Wellness</span>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Aliméntate Sano</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-i18n="case_alimentate_desc">
+                            Plataforma de comercio electrónico nutricional enfocada en productos de bienestar digestivo y canalización directa a ventas WhatsApp.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-slate-500 font-mono text-xs" data-i18n="status_active">Plataforma Activa</span>
+                    </div>
+                </div>
+
+                <!-- Vanguard Supply -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-cyan-500/50 transition flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-bold uppercase text-blue-400 tracking-wider">Industrial Logistics B2B</span>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Vanguard Supply</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-i18n="case_vanguard_desc">
+                            Portal de suministros industriales e importación de maquinaria desde EE. UU. con módulos automatizados de cotización.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-slate-500 font-mono text-xs" data-i18n="status_active">Plataforma Activa</span>
+                    </div>
+                </div>
+
+                <!-- TuFisioOficial -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-cyan-500/50 transition flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-bold uppercase text-indigo-400 tracking-wider">HealthTech & Medical Landing</span>
+                            <i class="fas fa-arrow-up-right-from-square text-slate-600"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">TuFisioOficial</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-i18n="case_tufisio_desc">
+                            Landing page médica de alta conversión para reserva de agendamientos físicos y tratamientos de fisioterapia especializada.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-slate-500 font-mono text-xs" data-i18n="status_active">Plataforma Activa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-slate-800 text-center text-xs text-slate-500">
+        <p>© 2026 VORTEX Matrix. All rights reserved. Operating globally from Colombia.</p>
+    </footer>
+
+    <!-- SCRIPT DE TRADUCCIÓN I18N EN TIEMPO REAL -->
+    <script>
+        const dictionary = {
+            es: {
+                nav_services: "Servicios",
+                nav_cases: "Casos de Éxito",
+                nav_about: "Nosotros",
+                btn_contact: "Iniciar Proyecto",
+                hero_badge: "Ingeniería Digital & Software B2B",
+                hero_title: "Estructuramos Software a Medida & Sistemas de Tracción Masiva",
+                hero_desc: "Desarrollamos infraestructura tecnológica de alto rendimiento, plataformas CRM personalizadas y campañas de adquisición optimizadas bajo la división Centrípeta.",
+                hero_btn_cases: "Ver Casos de Éxito",
+                hero_btn_tech: "Nuestra Arquitectura",
+                cases_title: "Casos de Éxito & Ecosistemas Desplegados",
+                cases_subtitle: "Plataformas reales operando con altos estándares de velocidad, conversión y arquitectura segura.",
+                case_permuta_desc: "Pasarela de intercambio inmobiliario y activos RWA con integración Cripto/FIAT y flujos de conversión de alta velocidad.",
+                case_alimentate_desc: "Plataforma de comercio electrónico nutricional enfocada en productos de bienestar digestivo y canalización directa a ventas WhatsApp.",
+                case_vanguard_desc: "Portal de suministros industriales e importación de maquinaria desde EE. UU. con módulos automatizados de cotización.",
+                case_tufisio_desc: "Landing page médica de alta conversión para reserva de agendamientos físicos y tratamientos de fisioterapia especializada.",
+                status_active: "Plataforma Activa"
+            },
+            en: {
+                nav_services: "Services",
+                nav_cases: "Case Studies",
+                nav_about: "About Us",
+                btn_contact: "Start Project",
+                hero_badge: "Digital Engineering & B2B Software",
+                hero_title: "We Engineer Custom Software & High-Yield Growth Systems",
+                hero_desc: "Building enterprise-grade digital infrastructure, bespoke CRM systems, and high-converting acquisition engines powered by our Centrípeta division.",
+                hero_btn_cases: "Explore Portfolio",
+                hero_btn_tech: "Our Architecture",
+                cases_title: "Featured Enterprise Portfolio",
+                cases_subtitle: "Production-ready platforms built for optimal speed, high conversion, and secure infrastructure.",
+                case_permuta_desc: "Real Estate & RWA Exchange Protocol featuring Crypto/FIAT gateways and high-velocity lead funnels.",
+                case_alimentate_desc: "Nutritional E-Commerce ecosystem built for digestive health products with seamless WhatsApp checkout integration.",
+                case_vanguard_desc: "B2B Industrial supply platform connecting machinery import workflows between US suppliers and local markets.",
+                case_tufisio_desc: "High-converting medical landing platform engineered for instant patient acquisition and appointment bookings.",
+                status_active: "Live Deployment"
+            }
+        };
+
+        let currentLang = 'es';
+        const langToggleBtn = document.getElementById('langToggle');
+        const langFlag = document.getElementById('langFlag');
+
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            langFlag.textContent = currentLang === 'es' ? '🇨🇴' : '🇺🇸';
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dictionary[currentLang][key]) {
+                    el.textContent = dictionary[currentLang][key];
+                }
+            });
+        });
+    </script>
+</body>
+</html>
