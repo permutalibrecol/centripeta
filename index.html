@@ -73,7 +73,6 @@
     <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-slate-900">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center space-x-3 group" aria-label="Agencia Centrípeta Home">
-                <!-- LOGO VECTORIAL SVG INLINE -->
                 <svg xmlns="http://w3.org" viewBox="0 0 580 180" class="h-9 w-auto">
                     <g transform="translate(10, 5)">
                         <path d="M70,45 C62,55 60,67 62,76 C66,69 73,67 77,69 C73,60 75,50 68,45 Z" fill="#4ade80" opacity="0.8" />
@@ -89,7 +88,6 @@
                 </svg>
             </a>
 
-            <!-- Navigation Links -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-300">
                 <a href="#services" class="hover:text-emerald-400 transition" data-i18n="nav_services">Servicios</a>
                 <a href="#cases" class="hover:text-emerald-400 transition" data-i18n="nav_cases">Casos de Éxito</a>
@@ -127,7 +125,6 @@
             </div>
         </div>
         
-        <!-- PARTNERS MONOCROMÁTICOS COMPONENT -->
         <div class="lg:col-span-5 bg-slate-900/40 border border-slate-900 rounded-3xl p-8 space-y-6">
             <p class="text-xs font-bold uppercase tracking-wider text-slate-500 text-center" data-i18n="partner_title">Tecnologías & Certificaciones Oficiales</p>
             <div class="grid grid-cols-2 gap-4">
@@ -140,231 +137,339 @@
                     <span class="text-[10px] font-bold text-slate-500 tracking-tight">TikTok Shop Operator</span>
                 </div>
                 <div class="flex flex-col items-center justify-center p-4 bg-slate-950 border border-slate-900 rounded-2xl hover:border-slate-800 transition group">
+                    <i class="fab fa-google text-3xl text-slate-600 group-hover:text-slate-100 transition mb-2"></i>
+                    <span class="text-[10px] font-bold text-slate-500 tracking-tight">Google AI Sales Ecosystem</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-4 bg-slate-950 border border-slate-900 rounded-2xl hover:border-slate-800 transition group">
+                    <i class="fab fa-microsoft text-3xl text-slate-600 group-hover:text-slate-100 transition mb-2"></i>
+                    <span class="text-[10px] font-bold text-slate-500 tracking-tight">Copilot Automation Enterprise</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-Google AI Sales Ecosystem
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="services" class="py-24 px-6 border-t border-slate-900 bg-slate-900/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-3xl mb-16 space-y-4">
+                <h2 class="text-3xl font-extrabold" data-i18n="services_title">Consultoría Estratégica Modular</h2>
+                <p class="text-slate-400 text-sm leading-relaxed" data-i18n="services_subtitle">
+                    Estructuramos las soluciones clave del mercado bajo un enfoque de eficiencia metodológica, garantizando ingeniería de punta a precios de producción competitivos y accesibles para corporaciones en escalado.
+                </p>
+            </div>
 
-Copilot Automation Enterprise
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-950 border border-slate-900 rounded-2xl p-8 hover:border-emerald-500/30 transition space-y-4">
+                    <div class="h-12 w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-i18n="p1_title">División Growth & Vanguardia Digital</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="p1_desc">
+                        Explotamos el poder absoluto de TikTok Ads y el ecosistema transaccional directo de TikTok Shop para consolidar conversiones masivas. Integramos de forma nativa los nuevos sistemas de ventas asistidos por IA (Google AI & Microsoft Copilot), automatizando la adquisición de leads calificados las 24 horas.
+                    </p>
+                </div>
 
+                <div class="bg-slate-950 border border-slate-900 rounded-2xl p-8 hover:border-emerald-500/30 transition space-y-4">
+                    <div class="h-12 w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-i18n="p2_title">Desarrollo de Software & Arquitectura API</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="p2_desc">
+                        Ingeniería y desarrollo de sitios web corporativos y plataformas web optimizadas para una carga instantánea y SEO impecable. Diseñamos e implementamos arquitecturas API robustas e integraciones complejas de sistemas para asegurar que la data de su empresa opere en perfecta sincronía.
+                    </p>
+                </div>
 
-Consultoría Estratégica Modular
+                <div class="bg-slate-950 border border-slate-900 rounded-2xl p-8 hover:border-emerald-500/30 transition space-y-4">
+                    <div class="h-12 w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-i18n="p3_title">Ecosistemas CRM Corporativos</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="p3_desc">
+                        Los CRM genéricos fallan porque no entienden su operación. Diseñamos arquitecturas CRM personalizadas y adaptadas que van más allá del pipeline comercial clásico: incorporamos módulos de control financiero estratégico, analítica predictiva de márgenes y seguimiento de inventarios transfronterizos en tiempo real.
+                    </p>
+                </div>
 
-Estructuramos las soluciones clave del mercado bajo un enfoque de eficiencia metodológica, garantizando ingeniería de punta a precios competitivos y accesibles para corporaciones en escalado.
+                <div class="bg-slate-950 border border-slate-900 rounded-2xl p-8 hover:border-emerald-500/30 transition space-y-4">
+                    <div class="h-12 w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold" data-i18n="p4_title">Consultoría B2B, Expansión & Respaldo Legal</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed" data-i18n="p4_desc">
+                        Estructuración legal y fiscal integral para empresas locales y extranjeras. Gestionamos la creación y constitución de sociedades, optimización tributaria internacional y brindamos seguimiento jurídico corporativo permanente para blindar legalmente cada fase de su escalamiento comercial.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- CASOS DE ÉXITO -->
+    <section id="cases" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center space-y-4 mb-16">
+            <h2 class="text-3xl font-extrabold" data-i18n="cases_title">Ecosistemas Desplegados & Casos de Éxito</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto text-sm" data-i18n="cases_subtitle">
+                Plataformas de alta disponibilidad operando bajo estrictos estándares internacionales de conversión y seguridad.
+            </p>
+        </div>
 
-Division Growth & Vanguardia Digital
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Caso 1 -->
+            <div class="bg-slate-900/40 border border-slate-900 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-800 transition">
+                <div class="space-y-4">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full">Web3 / FinTech / RWA</span>
+                    <h3 class="text-xl font-bold">Permuta Libre</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed" data-i18n="c1_desc">
+                        Pasarela de intercambio inmobiliario y activos RWA con integraciones avanzadas cripto/fiat, simplificando retiros y liquidación segura de capital en Bogotá y Chía.
+                    </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-900">
+                    <a href="https://permutalibre.com.co" target="_blank" rel="noopener" class="text-xs font-bold text-emerald-400 hover:underline">://permutalibre.com.co →</a>
+                </div>
+            </div>
 
-Explotamos el poder absoluto de TikTok Ads y el ecosistema transaccional directo de TikTok Shop para consolidar conversiones masivas. Integramos de forma nativa los nuevos sistemas de ventas asistidos por IA (Google AI & Microsoft Copilot), automatizando la adquisición de leads calificados las 24 horas.
+            <!-- Caso 2 -->
+            <div class="bg-slate-900/40 border border-slate-900 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-800 transition">
+                <div class="space-y-4">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full">Logística / Finanzas Internacionales</span>
+                    <h3 class="text-xl font-bold">Tequila VII Continentes</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed" data-i18n="c2_desc">
+                        Estructura transfronteriza (México-Colombia-USA). Desarrollamos un software personalizado de control de cantidades, analítica e inventarios integrados a su CRM para respaldar su expansión en Sudamérica.
+                    </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-900">
+                    <a href="https://viicontinentes.com" target="_blank" rel="noopener" class="text-xs font-bold text-amber-400 hover:underline">viicontinentes.com →</a>
+                </div>
+            </div>
 
+            <!-- Caso 3 -->
+            <div class="bg-slate-900/40 border border-slate-900 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-800 transition">
+                <div class="space-y-4">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-full">E-Commerce / Health & Wellness</span>
+                    <h3 class="text-xl font-bold">Aliméntate Saludable Hoy</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed" data-i18n="c3_desc">
+                        Ecosistema optimizado de educación nutricional y biohacking. Implementación de embudo automatizado enfocado en la conversión y canalización directa a pipelines de ventas de alta velocidad en WhatsApp.
+                    </p>
+                </div>
+                <div class="pt-6 mt-6 border-t border-slate-900">
+                    <a href="https://alimentatesaludablehoy.com" target="_blank" rel="noopener" class="text-xs font-bold text-cyan-400 hover:underline">alimentatesaludablehoy.com →</a>
+                </div>
+            </div>
+        </div>
 
-Desarrollo de Software & Arquitectura API
+        <!-- TESTIMONIO -->
+        <div id="about" class="mt-16 bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-900 rounded-3xl p-8 max-w-4xl mx-auto text-center space-y-4">
+            <p class="text-base sm:text-lg italic text-slate-300 font-light" data-i18n="testimonial_text">
+                "Agencia Centrípeta transformó nuestra presencia online y control operativo. Su enfoque estratégico nos ayudó a conectar con nuestra audiencia y estructurar la empresa a nivel internacional como nunca antes."
+            </p>
+            <p class="text-xs font-bold uppercase tracking-wider text-emerald-400" data-i18n="testimonial_author">— Directiva Corporativa, Cliente Satisfecho</p>
+        </div>
+    </section>
 
-Ingeniería y desarrollo de sitios web corporativos y plataformas web optimizadas para una carga instantánea y SEO impecable. Diseñamos e implementamos arquitecturas API robustas e integraciones complejas de sistemas para asegurar que la data de su empresa opere en perfecta sincronía.
+    <!-- BLOG -->
+    <section id="blog" class="py-24 px-6 border-t border-slate-900 bg-slate-900/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center space-y-4 mb-16">
 
-Ecosistemas CRM Corporativos
+                <h2 class="text-3xl font-extrabold" data-i18n="blog_title">Consejos & Tendencias del Sector</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-sm" data-i18n="blog_subtitle">
+                    Visita nuestro blog para obtener consejos útiles sobre marketing digital, estrategias efectivas de software y marcos legales corporativos.
+                </p>
+            </div>
 
-Los CRM genéricos fallan porque no entienden su operación. Diseñamos arquitecturas CRM personalizadas y adaptadas que van más allá del pipeline comercial clásico: incorporamos módulos de control financiero estratégico, analítica predictiva de márgenes y seguimiento de inventarios transfronterizos en tiempo real.
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-slate-950 border border-slate-900 rounded-2xl p-6 space-y-4 hover:border-slate-800 transition">
+                    <span class="text-[10px] font-mono font-bold text-emerald-400">Marketing & IA</span>
+                    <h3 class="text-lg font-bold">Optimizando el ROI global con pauta asistida en Inteligencia Artificial</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Cómo las arquitecturas integradas de Google AI están cambiando las tasas de adquisición corporativas.</p>
+                </article>
+                <article class="bg-slate-950 border border-slate-900 rounded-2xl p-6 space-y-4 hover:border-slate-800 transition">
+                    <span class="text-[10px] font-mono font-bold text-cyan-400">Software & CRM</span>
+                    <h3 class="text-lg font-bold">Por qué tu empresa necesita un CRM con control financiero a medida</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">El riesgo crítico de depender de CRM genéricos sin sincronización de inventarios ni control de fugas operativas.</p>
+                </article>
+                <article class="bg-slate-950 border border-slate-900 rounded-2xl p-6 space-y-4 hover:border-slate-800 transition">
+                    <span class="text-[10px] font-mono font-bold text-amber-400">Estructura B2B</span>
+                    <h3 class="text-lg font-bold">Blindaje Jurídico para la expansión y constitución de empresas internacionales</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">Puntos clave para extranjeros buscando desplegar operaciones legales y comerciales en mercados sudamericanos.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
+    <!-- FORMULARIO DE CONTACTO INTERACTIVO -->
+    <section id="contact" class="py-24 px-6 border-t border-slate-900 bg-slate-950 relative">
+        <div class="max-w-xl mx-auto bg-slate-900/50 border border-slate-900 rounded-3xl p-8 space-y-8 relative z-10">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl font-bold tracking-tight" data-i18n="contact_title">¿Listo para el siguiente nivel?</h2>
+                <p class="text-slate-400 text-xs" data-i18n="contact_subtitle">Completa este breve formulario interactivo y te contactaremos de inmediato.</p>
+            </div>
 
-Consultoría B2B, Expansión & Respaldo Legal
+            <div class="flex items-center justify-center space-x-4 text-xs font-bold">
+                <span id="step1Indicator" class="h-6 w-6 rounded-full flex items-center justify-center step-active">1</span>
+                <div class="h-[1px] w-8 bg-slate-800"></div>
+                <span id="step2Indicator" class="h-6 w-6 rounded-full flex items-center justify-center bg-slate-800 text-slate-400">2</span>
+                <div class="h-[1px] w-8 bg-slate-800"></div>
+                <span id="step3Indicator" class="h-6 w-6 rounded-full flex items-center justify-center bg-slate-800 text-slate-400">3</span>
+            </div>
 
-Estructuración legal y fiscal integral para empresas locales y extranjeras. Gestionamos la creación y constitución de sociedades, optimización tributaria internacional y brindamos seguimiento jurídico corporativo permanente para blindar legalmente cada fase de su escalamiento comercial.
+            <form id="dynamicForm" class="space-y-6">
+                <!-- Paso 1: Email -->
+                <div id="step1" class="space-y-2">
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider">Tu Correo Electrónico Corporativo</label>
+                    <input type="email" id="formEmail" placeholder="nombre@empresa.com" class="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl px-4 py-3 text-sm text-slate-100 outline-none transition">
+                </div>
 
+                <!-- Paso 2: Teléfono (Oculto Inicialmente) -->
+                <div id="step2" class="space-y-2 hidden">
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider">Número de Teléfono / WhatsApp</label>
+                    <input type="tel" id="formPhone" placeholder="+57 300 000 0000" class="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl px-4 py-3 text-sm text-slate-100 outline-none transition">
+                </div>
 
-Ecosistemas Desplegados & Casos de Éxito
+                <!-- Paso 3: Interés (Oculto Inicialmente) -->
+                <div id="step3" class="space-y-4 hidden">
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider text-center">Selecciona tu interés principal</label>
+                    <div class="grid grid-cols-1 gap-2">
+                        <button type="button" onclick="selectInterest('Growth & IA Marketing')" class="w-full bg-slate-950 border border-slate-800 hover:border-emerald-500 rounded-xl py-3 text-xs font-bold transition text-left px-4">🚀 Growth, TikTok Ads e Inteligencia Artificial</button>
+                        <button type="button" onclick="selectInterest('Software & CRM Financiero')" class="w-full bg-slate-950 border border-slate-800 hover:border-emerald-500 rounded-xl py-3 text-xs font-bold transition text-left px-4">💻 Software a Medida, APIs & CRM Financiero</button>
+                        <button type="button" onclick="selectInterest('Consultoria Legal B2B')" class="w-full bg-slate-950 border border-slate-800 hover:border-emerald-500 rounded-xl py-3 text-xs font-bold transition text-left px-4">⚖️ Consultoría Legal B2B & Expansión Corporativa</button>
+                    </div>
+                </div>
 
-Plataformas de alta disponibilidad operando bajo estrictos estándares internacionales de conversión y seguridad.
+                <div id="formControls" class="flex justify-between items-center pt-2">
+                    <button type="button" id="prevBtn" class="text-xs font-bold text-slate-500 hover:text-slate-300 opacity-0 transition">Atrás</button>
+                    <button type="button" id="nextBtn" class="bg-slate-100 text-slate-950 font-bold text-xs px-6 py-2.5 rounded-lg hover:bg-white transition">Siguiente →</button>
+                </div>
+            </form>
+            
+            <div id="successMessage" class="hidden text-center space-y-2 py-4">
+                <i class="fas fa-check-circle text-4xl text-emerald-400"></i>
+                <h3 class="text-lg font-bold">¡Datos Recibidos con Éxito!</h3>
+                <p class="text-xs text-slate-400">Nuestro equipo estratégico se comunicará contigo en menos de 5 minutos vía WhatsApp.</p>
+            </div>
+        </div>
+    </section>
 
-Web3 / FinTech / RWA
-Permuta Libre
+    <!-- PIE DE PÁGINA -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <span class="text-xs text-slate-500">© 2026 Agencia Centrípeta. Todos los derechos reservados. Infraestructura Global de Alta Disponibilidad.</span>
+            <div class="flex space-x-6 text-xs text-slate-500">
+                <a href="#" class="hover:text-slate-300 transition">Política de Privacidad</a>
+                <a href="#" class="hover:text-slate-300 transition">Términos de Servicio</a>
+            </div>
+        </div>
+    </footer>
 
-Pasarela de intercambio inmobiliario y activos RWA con integraciones avanzadas cripto/fiat, simplificando retiros y liquidación segura de capital en Bogotá y Chía.
+    <!-- SCRIPTS CORE DE CONTROL -->
+    <script>
+        const i18n = {
+            es: {
+                nav_services: "Servicios", nav_cases: "Casos de Éxito", nav_about: "Nosotros", nav_blog: "Blog", btn_contact: "Iniciar Proyecto",
+                hero_badge: "Alta Ingeniería Digital & Tracción B2B", hero_title: "Aceleramos tu Tracción Comercial con Software & IA",
+                hero_desc: "Estructuramos ecosistemas masivos de ventas y blindaje corporativo. Desde embudos de conversión con IA predictiva hasta arquitecturas de software financiero e inventario a medida, respaldados por consultoría legal global.",
+                hero_btn_contact: "🛠 Contáctanos Ahora", hero_btn_services: "Nuestros Pilares",
+                partner_title: "Tecnologías & Certificaciones Oficiales",
+                services_title: "Consultoría Estratégica Modular", services_subtitle: "Estructuramos las soluciones clave del mercado bajo un enfoque de eficiencia metodológica, garantizando ingeniería de punta a precios competitivos y accesibles para corporaciones en escalado.",
+                p1_title: "División Growth & Vanguardia Digital", p1_desc: "Explotamos el poder absoluto de TikTok Ads y el ecosistema transaccional directo de TikTok Shop para consolidar conversiones masivas. Integramos de forma nativa los nuevos sistemas de ventas asistidos por IA (Google AI & Microsoft Copilot), automatizando la adquisición de leads calificados las 24 horas.",
+                p2_title: "Desarrollo de Software & Arquitectura API", p2_desc: "Ingeniería y desarrollo de sitios web corporativos y plataformas web optimizadas para una carga instantánea y SEO impecable. Diseñamos e implementamos arquitecturas API robustas e integraciones complejas de sistemas para asegurar que la data de su empresa opere en perfecta sincronía.",
+                p3_title: "Ecosistemas CRM Corporativos", p3_desc: "Los CRM genéricos fallan porque no entienden su operación. Diseñamos arquitecturas CRM personalizadas y adaptadas que van más allá del pipeline comercial clásico: incorporamos módulos de control financiero estratégico, analítica predictiva de márgenes y seguimiento de inventarios transfronterizos en tiempo real.",
+                p4_title: "Consultoría B2B, Expansión & Respaldo Legal", p4_desc: "Estructuración legal y fiscal integral para empresas locales y extranjeras. Gestionamos la creación y constitución de sociedades, optimización tributaria internacional y brindamos seguimiento jurídico corporativo permanente para blindar legalmente cada fase de su escalamiento comercial.", 
 
+                cases_title: "Ecosistemas Desplegados & Casos de Éxito", cases_subtitle: "Plataformas de alta disponibilidad operando bajo estrictos estándares internacionales de conversión y seguridad.",
+                c1_desc: "Pasarela de intercambio inmobiliario y activos RWA con integraciones avanzadas cripto/fiat, simplificando retiros y liquidación segura de capital en Bogotá y Chía.",
+                c2_desc: "Estructura transfronteriza (México-Colombia-USA). Desarrollamos un software personalizado de control de cantidades, analítica e inventarios integrados a su CRM para respaldar su expansión en Sudamérica.",
+                c3_desc: "Ecosistema optimizado de educación nutricional y biohacking. Implementación de embudo automatizado enfocado en la conversión y canalización directa a pipelines de ventas de alta velocidad en WhatsApp.",
+                testimonial_text: "\"Agencia Centrípeta transformó nuestra presencia online y control operativo. Su enfoque estratégico nos ayudó a conectar con nuestra audiencia y estructurar la empresa a nivel internacional como nunca antes.\"",
+                testimonial_author: "— Directiva Corporativa, Cliente Satisfecho",
+                blog_title: "Consejos & Tendencias del Sector", blog_subtitle: "Visita nuestro blog para obtener consejos útiles sobre marketing digital, estrategias efectivas de software y marcos legales corporativos.",
+                contact_title: "¿Listo para el siguiente nivel?", contact_subtitle: "Completa este breve formulario interactivo y te contactaremos de inmediato."
+            },
+            en: {
+                nav_services: "Services", nav_cases: "Success Cases", nav_about: "About Us", nav_blog: "Blog", btn_contact: "Start Project",
+                hero_badge: "High Digital Engineering & B2B Traction", hero_title: "We Accelerate Corporate Traction with Software & AI",
+                hero_desc: "We engineer massive growth environments and enterprise structures. From predictive AI conversion funnels to deep financial and cross-border inventory software architectures, tied with global corporate legal counsel.",
+                hero_btn_contact: "🛠 Contact Us Now", hero_btn_services: "Our Core Pillars",
+                partner_title: "Official Tech Stacks & Solutions",
+                services_title: "Modular Strategic Consulting", services_subtitle: "We structure critical engineering and infrastructure under asset-efficient methodologies, bringing top-tier software and corporate structures at competitive rates.",
+                p1_title: "Growth Division & Digital Edge", p1_desc: "We unleash the core transactional power of TikTok Ads and TikTok Shop pipelines. We embed natively advanced AI-assisted enterprise sales systems (Google AI & Microsoft Copilot architectures) to run automated, intelligent lead acquisition models.",
+                p2_title: "Custom Software & API Architectures", p2_desc: "Engineering and manufacturing high-availability company sites and platforms designed for immediate load states and bulletproof SEO infrastructure. We design unified data flows through custom API connections.",
+                p3_title: "Bespoke Enterprise CRM Development", p3_desc: "Standard CRMs fail because they miss your internal operations. We deliver tailored CRM structures that optimize your commercial pipelines while handling strict real-time financial tracking and multi-country asset control.",
+                p4_title: "Consulting B2B, Expansion & Global Corporate Law", p4_desc: "Comprehensive legal and compliance setup for domestic and international corporations. We handle local and offshore business formations, tax optimization, and permanent corporate governance to protect scaling assets.",
+                cases_title: "Deployed Frameworks & Success Stories", cases_subtitle: "High-performance systems operating under strict global conversion, velocity, and secure guidelines.",
+                c1_desc: "Real estate exchange rails and RWA tokenization ecosystem with deep crypto/fiat processing assets, optimizing operations across Bogotá and Chía.",
+                c2_desc: "Cross-border ecosystem (Mexico-Colombia-USA). We engineered quantitative tracking platforms and financial multi-node inventory software mapped directly to their core CRM infrastructure.",
+                c3_desc: "Optimized nutrition and biohacking frameworks. Deployment of conversion-focused funnel engines connecting traffic directly with immediate high-speed WhatsApp workflows.",
+                testimonial_text: "\"Agencia Centrípeta overhauled our digital acquisition architecture and internal operations. Their framework allowed us to connect with audiences and scale cross-border systems smoothly.\"",
+                testimonial_author: "— Corporate Executive Management, Satisfied Client",
+                blog_title: "Insights & Market Trends", blog_subtitle: "Explore our corporate blog for growth insights, clean custom code methodologies, and legal parameters for modern scaling.",
+                contact_title: "Ready for the next step?", contact_subtitle: "Fill out this quick interactive framework and our strategic team will connect with you."
+            }
+        };
 
+        let currentLang = 'es';
+        const langToggle = document.getElementById('langToggle');
+        const langFlag = document.getElementById('langFlag');
+        const langLabel = document.getElementById('langLabel');
 
-permutalibre.com.co →
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            langFlag.textContent = currentLang === 'es' ? '🇨🇴' : '🇺🇸';
+            langLabel.textContent = currentLang.toUpperCase();
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[currentLang][key]) el.textContent = i18n[currentLang][key];
+            });
+        });
 
-Logística / Finanzas Internacionales
-Tequila VII Continentes
+        // Control del Formulario Interactivo Dinámico de Pasos
+        let currentStep = 1;
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const dynamicForm = document.getElementById('dynamicForm');
+        const successMessage = document.getElementById('successMessage');
 
-Estructura transfronteriza (México-Colombia-USA). Desarrollamos un software personalizado de control de cantidades, analítica e inventarios integrados a su CRM para respaldar su expansión en Sudamérica.
+        const collectedData = { email: '', phone: '', interest: '' };
 
+        nextBtn.addEventListener('click', () => {
+            if (currentStep === 1) {
+                const emailInput = document.getElementById('formEmail').value;
+                if (!emailInput.includes('@')) { alert('Por favor, ingresa un correo válido'); return; }
+                collectedData.email = emailInput;
+                
+                document.getElementById('step1').classList.add('hidden');
+                document.getElementById('step2').classList.remove('hidden');
+                document.getElementById('step2Indicator').classList.add('step-active');
+                prevBtn.classList.remove('opacity-0');
+                currentStep = 2;
+            } else if (currentStep === 2) {
+                const phoneInput = document.getElementById('formPhone').value;
+                if (phoneInput.length < 7) { alert('Por favor, ingresa un número de teléfono válido'); return; }
+                collectedData.phone = phoneInput;
 
+                document.getElementById('step2').classList.add('hidden');
+                document.getElementById('step3').classList.remove('hidden');
+                document.getElementById('step3Indicator').classList.add('step-active');
+                document.getElementById('formControls').classList.add('hidden');
+                currentStep = 3;
+            }
+        });
 
-viicontinentes.com →
+        prevBtn.addEventListener('click', () => {
+            if (currentStep === 2) {
+                document.getElementById('step2').classList.add('hidden');
+                document.getElementById('step1').classList.remove('hidden');
+                document.getElementById('step2Indicator').classList.remove('step-active');
+                prevBtn.classList.add('opacity-0');
+                currentStep = 1;
+            }
+        });
 
-E-Commerce / Health & Wellness
-Aliméntate Saludable Hoy
-
-Ecosistema optimizado de educación nutricional y biohacking. Implementación de embudo automatizado enfocado en la conversión y canalización directa a pipelines de ventas de alta velocidad en WhatsApp.
-
-
-
-alimentatesaludablehoy.com →
-
-
-"Agencia Centrípeta transformó nuestra presencia online y control operativo. Su enfoque estratégico nos ayudó a conectar con nuestra audiencia y estructurar la empresa a nivel internacional como nunca antes."
-
-— Directiva Corporativa, Cliente Satisfecho
-
-Consejos & Tendencias del Sector
-
-Visita nuestro blog para obtener consejos útiles sobre marketing digital, estrategias efectivas de software y marcos legales corporativos.
-
-Marketing & IA
-Optimizando el ROI global con pauta asistida en Inteligencia Artificial
-Cómo las arquitecturas integradas de Google AI están cambiando las tasas de adquisición corporativas.
-
-
-Software & CRM
-Por qué tu empresa necesita un CRM con control financiero a medida
-El riesgo crítico de depender de CRM genéricos sin sincronización de inventarios ni control de fugas operativas.
-
-
-Estructura B2B
-Blindaje Jurídico para la expansión y constitución de empresas internacionales
-Puntos clave para extranjeros buscando desplegar operaciones legales y comerciales en mercados sudamericanos.
-
-
-
-¿Listo para el siguiente nivel?
-Completa este breve formulario interactivo y te contactaremos de inmediato.
-1
-
-2
-
-3
-Tu Correo Electrónico Corporativo
-Número de Teléfono / WhatsApp
-Selecciona tu interés principal
-🚀 Growth, TikTok Ads e Inteligencia Artificial
-💻 Software a Medida, APIs & CRM Financiero
-⚖️ Consultoría Legal B2B & Expansión Corporativa
-
-Atrás
-Siguiente →
-
-
-¡Datos Recibidos con Éxito!
-Nuestro equipo estratégico se comunicará contigo en menos de 5 minutos vía WhatsApp.
-
-
-© 2026 Agencia Centrípeta. Todos los derechos reservados. Infraestructura Global de Alta Disponibilidad.
-
-Política de Privacidad
-Términos de Servicio
-
-
-// Sistema de Idiomas i18n Integrado
-const i18n = {
-es: {
-nav_services: "Servicios", nav_cases: "Casos de Éxito", nav_about: "Nosotros", nav_blog: "Blog", btn_contact: "Iniciar Proyecto",
-hero_badge: "Alta Ingeniería Digital & Tracción B2B", hero_title: "Aceleramos tu Tracción Comercial con Software & IA",
-hero_desc: "Estructuramos ecosistemas masivos de ventas y blindaje corporativo. Desde embudos de conversión con IA predictiva hasta arquitecturas de software financiero e inventario a medida, respaldados por consultoría legal global.",
-hero_btn_contact: "🛠 Contáctanos Ahora", hero_btn_services: "Nuestros Pilares",
-partner_title: "Tecnologías & Certificaciones Oficiales",
-services_title: "Consultoría Estratégica Modular", services_subtitle: "Estructuramos las soluciones clave del mercado bajo un enfoque de eficiencia metodológica, garantizando ingeniería de punta a precios competitivos y accesibles para corporaciones en escalado.",
-p1_title: "Division Growth & Vanguardia Digital", p1_desc: "Explotamos el poder absoluto de TikTok Ads y el ecosistema transaccional directo de TikTok Shop para consolidar conversiones masivas. Integramos de forma nativa los nuevos sistemas de ventas asistidos por IA (Google AI & Microsoft Copilot), automatizando la adquisición de leads calificados las 24 horas.",
-p2_title: "Desarrollo de Software & Arquitectura API", p2_desc: "Ingeniería y desarrollo de sitios web corporativos y plataformas web optimizadas para una carga instantánea y SEO impecable. Diseñamos e implementamos arquitecturas API robustas e integraciones complejas de sistemas para asegurar que la data de su empresa opere en perfecta sincronía.",
-p3_title: "Ecosistemas CRM Corporativos", p3_desc: "Los CRM genéricos fallan porque no entienden su operación. Diseñamos arquitecturas CRM personalizadas y adaptadas que van más allá del pipeline comercial clásico: incorporamos módulos de control financiero estratégico, analítica predictiva de márgenes y seguimiento de inventarios transfronterizos en tiempo real.",
-p4_title: "Consultoría B2B, Expansión & Respaldo Legal", p4_desc: "Estructuración legal y fiscal integral para empresas locales y extranjeras. Gestionamos la creación y constitución de sociedades, optimización tributaria internacional y brindamos seguimiento jurídico corporativo permanente para blindar legalmente cada fase de su escalamiento comercial.",
-cases_title: "Ecosistemas Desplegados & Casos de Éxito", cases_subtitle: "Plataformas de alta disponibilidad operando bajo estrictos estándares internacionales de conversión y seguridad.",
-c1_desc: "Pasarela de intercambio inmobiliario y activos RWA con integraciones avanzadas cripto/fiat, simplificando retiros y liquidación segura de capital en Bogotá y Chía.",
-c2_desc: "Estructura transfronteriza (México-Colombia-USA). Desarrollamos un software personalizado de control de cantidades, analítica e inventarios integrados a su CRM para respaldar su expansión en Sudamérica.",
-c3_desc: "Ecosistema optimizado de educación nutricional y biohacking. Implementación de embudo automatizado enfocado en la conversión y canalización directa a pipelines de ventas de alta velocidad en WhatsApp.",
-testimonial_text: ""Agencia Centrípeta transformó nuestra presencia online y control operativo. Su enfoque estratégico nos ayudó a conectar con nuestra audiencia y estructurar la empresa a nivel internacional como nunca antes."",
-testimonial_author: "— Directiva Corporativa, Cliente Satisfecho",
-blog_title: "Consejos & Tendencias del Sector", blog_subtitle: "Visita nuestro blog para obtener consejos útiles sobre marketing digital, estrategias efectivas de software y marcos legales corporativos.",
-contact_title: "¿Listo para el siguiente nivel?", contact_subtitle: "Completa este breve formulario interactivo y te contactaremos de inmediato."
-},
-en: {
-nav_services: "Services", nav_cases: "Success Cases", nav_about: "About Us", nav_blog: "Blog", btn_contact: "Start Project",
-hero_badge: "High Digital Engineering & B2B Traction", hero_title: "We Accelerate Corporate Traction with Software & AI",
-hero_desc: "We engineer massive growth environments and enterprise structures. From predictive AI conversion funnels to deep financial and cross-border inventory software architectures, tied with global corporate legal counsel.",
-hero_btn_contact: "🛠 Contact Us Now", hero_btn_services: "Our Core Pillars",
-partner_title: "Official Tech Stacks & Solutions",
-services_title: "Modular Strategic Consulting", services_subtitle: "We structure critical engineering and infrastructure under asset-efficient methodologies, bringing top-tier software and corporate structures at competitive rates.",
-p1_title: "Growth Division & Digital Edge", p1_desc: "We unleash the core transactional power of TikTok Ads and TikTok Shop pipelines. We embed natively advanced AI-assisted enterprise sales systems (Google AI & Microsoft Copilot architectures) to run automated, intelligent lead acquisition models.",
-p2_title: "Custom Software & API Architectures", p2_desc: "Engineering and manufacturing high-availability company sites and platforms designed for immediate load states and bulletproof SEO infrastructure. We design unified data flows through custom API connections.",
-p3_title: "Bespoke Enterprise CRM Development", p3_desc: "Standard CRMs fail because they miss your internal operations. We deliver tailored CRM structures that optimize your commercial pipelines while handling strict real-time financial tracking and multi-country asset control.",
-p4_title: "B2B Consulting & Global Corporate Law", p4_desc: "Comprehensive legal and compliance setup for domestic and international corporations. We handle local and offshore business formations, tax optimization, and permanent corporate governance to protect scaling assets.",
-cases_title: "Deployed Frameworks & Success Stories", cases_subtitle: "High-performance systems operating under strict global conversion, velocity, and secure guidelines.",
-c1_desc: "Real estate exchange rails and RWA tokenization ecosystem with deep crypto/fiat processing assets, optimizing operations across Bogotá and Chía.",
-c2_desc: "Cross-border ecosystem (Mexico-Colombia-USA). We engineered quantitative tracking platforms and financial multi-node inventory software mapped directly to their core CRM infrastructure.",
-c3_desc: "Optimized nutrition and biohacking frameworks. Deployment of conversion-focused funnel engines connecting traffic directly with immediate high-speed WhatsApp workflows.",
-testimonial_text: ""Agencia Centrípeta overhauled our digital acquisition architecture and internal operations. Their framework allowed us to connect with audiences and scale cross-border systems smoothly."",
-testimonial_author: "— Corporate Executive Management, Satisfied Client",
-blog_title: "Insights & Market Trends", blog_subtitle: "Explore our corporate blog for growth insights, clean custom code methodologies, and legal parameters for modern scaling.",
-contact_title: "Ready for the next step?", contact_subtitle: "Fill out this quick interactive framework and our strategic team will connect with you."
-}
-};
-let currentLang = 'es';
-const langToggle = document.getElementById('langToggle');
-const langFlag = document.getElementById('langFlag');
-const langLabel = document.getElementById('langLabel');
-langToggle.addEventListener('click', () => {
-currentLang = currentLang === 'es' ? 'en' : 'es';
-langFlag.textContent = currentLang === 'es' ? '🇨🇴' : '🇺🇸';
-langLabel.textContent = currentLang.toUpperCase();
-document.querySelectorAll('[data-i18n]').forEach(el => {
-const key = el.getAttribute('data-i18n');
-if (i18n[currentLang][key]) el.textContent = i18n[currentLang][key];
-});
-});
-// Lógica Dinámica e Interactiva del Formulario en 3 Pasos
-let currentStep = 1;
-const totalSteps = 3;
-const nextBtn = document.getElementById('nextBtn');
-const prevBtn = document.getElementById('prevBtn');
-const dynamicForm = document.getElementById('dynamicForm');
-const successMessage = document.getElementById('successMessage');
-const collectedData = { email: '', phone: '', interest: '' };
-nextBtn.addEventListener('click', () => {
-if (currentStep === 1) {
-const emailInput = document.getElementById('formEmail').value;
-if (!emailInput.includes('@')) { alert('Por favor, ingresa un correo válido'); return; }
-collectedData.email = emailInput;
-document.getElementById('step1').classList.add('hidden');
-document.getElementById('step2').classList.remove('hidden');
-document.getElementById('step2Indicator').classList.add('step-active');
-prevBtn.classList.remove('opacity-0');
-currentStep = 2;
-} else if (currentStep === 2) {
-const phoneInput = document.getElementById('formPhone').value;
-if (phoneInput.length < 7) { alert('Por favor, ingresa un número válido'); return; }
-collectedData.phone = phoneInput;
-document.getElementById('step2').classList.add('hidden');
-document.getElementById('step3').classList.remove('hidden');
-document.getElementById('step3Indicator').classList.add('step-active');
-document.getElementById('formControls').classList.add('hidden');
-currentStep = 3;
-}
-});
-prevBtn.addEventListener('click', () => {
-if (currentStep === 2) {
-document.getElementById('step2').classList.add('hidden');
-document.getElementById('step1').classList.remove('hidden');
-document.getElementById('step2Indicator').classList.remove('step-active');
-prevBtn.classList.add('opacity-0');
-currentStep = 1;
-}
-});
-function selectInterest(interestValue) {
-collectedData.interest = interestValue;
-console.log('Datos listos para enviar a base de datos o Webhook:', collectedData);
-// Ocultar formulario y mostrar mensaje exitoso de conversión
-dynamicForm.classList.add('hidden');
-successMessage.classList.remove('hidden');
-}
-
-
-
-### 🧠 Diagnóstico de Optimización Semántica (Por qué le encanta a los LLMs)
-1.  **Grafo JSON-LD Limpio:** Los rastreadores semánticos no necesitan "leer e interpretar" párrafos para saber a qué te dedicas; el bloque `@graph` define categóricamente tus áreas de conocimiento (`knowsAbout`), datos de contacto unificados y relaciones de marca.
-2.  **Estructura Jerárquica H1-H3:** No hay saltos de jerarquía. Los títulos y subtítulos exponen la conversión comercial exactamente como la delimitamos.
-3.  **Cero dependencias pesadas:** Al correr con scripts empaquetados desde CDNs globales de alta velocidad (`tailwindcss` y `font-awesome`), la página pasará los análisis de velocidad Core Web Vitals en verde absoluto, un factor crítico para el ranking orgánico global.
-
-<FollowUp>
-¡Listo para subir! Si deseas expandir algo más adelante, dime:
-* ¿Quieres que prepare un **archivo `.json` complementario** o un archivo **`README.md` optimizado** para documentar tu despliegue en el repositorio de GitHub?
-* ¿Te gustaría que agreguemos un **Webhook real** (por ejemplo, hacia Make o Zapier) en la función `selectInterest` de JavaScript para capturar las respuestas del formulario en tiempo real en tu teléfono?
-</FollowUp>
+        function selectInterest(interestValue) {
+            collectedData.interest = interestValue;
+            console.log('Estructura de Conversión Completada con Éxito:', collectedData);
+            
+            dynamicForm.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
