@@ -17,10 +17,10 @@
     <meta property="og:site_name" content="Agencia Centrípeta">
     
     <!-- Scripts Base (Tailwind & FontAwesome) -->
-    <script src="https://tailwindcss.com"></script>
-    <link href="https://cloudflare.com" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://googleapis.com');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .glass { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); }
         .gradient-text { background: linear-gradient(135deg, #4ade80, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -34,11 +34,11 @@
       "@graph": [
         {
           "@type": "ProfessionalService",
-          "@id": "https://centripeta.media",
+          "@id": "https://centripeta.media/#organization",
           "name": "Agencia Centrípeta",
           "url": "https://centripeta.media",
-          "logo": "https://centripeta.media",
-          "image": "https://centripeta.media",
+          "logo": "https://centripeta.media/assets/logo.png",
+          "image": "https://centripeta.media/assets/og-cover.png",
           "description": "Agencia global de ingeniería de software a medida, automatización comercial con inteligencia artificial, despliegue de CRM con control financiero y consultoría jurídica corporativa transfronteriza.",
           "telephone": "+573233936850",
           "email": "contacto@centripeta.media",
@@ -58,10 +58,10 @@
         },
         {
           "@type": "WebSite",
-          "@id": "https://centripeta.media",
+          "@id": "https://centripeta.media/#website",
           "url": "https://centripeta.media",
           "name": "Agencia Centrípeta",
-          "publisher": { "@id": "https://centripeta.media" }
+          "publisher": { "@id": "https://centripeta.media/#organization" }
         }
       ]
     }
@@ -73,7 +73,7 @@
     <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-slate-900">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center space-x-3 group" aria-label="Agencia Centrípeta Home">
-                <svg xmlns="http://w3.org" viewBox="0 0 580 180" class="h-9 w-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 180" class="h-9 w-auto">
                     <g transform="translate(10, 5)">
                         <path d="M70,45 C62,55 60,67 62,76 C66,69 73,67 77,69 C73,60 75,50 68,45 Z" fill="#4ade80" opacity="0.8" />
                         <path d="M70,23 C72,34 81,50 81,62 C81,64 76,66 70,66 C64,66 61,64 61,62 C61,50 70,34 70,23 Z" fill="#A7F3D0" />
@@ -222,7 +222,7 @@
                     </p>
                 </div>
                 <div class="pt-6 mt-6 border-t border-slate-900">
-                    <a href="https://permutalibre.com.co" target="_blank" rel="noopener" class="text-xs font-bold text-emerald-400 hover:underline">://permutalibre.com.co →</a>
+                    <a href="https://www.permutalibre.com.co" target="_blank" rel="noopener" class="text-xs font-bold text-emerald-400 hover:underline">www.permutalibre.com.co →</a>
                 </div>
             </div>
 
@@ -250,7 +250,7 @@
                     </p>
                 </div>
                 <div class="pt-6 mt-6 border-t border-slate-900">
-                    <a href="https://alimentatesaludablehoy.com" target="_blank" rel="noopener" class="text-xs font-bold text-cyan-400 hover:underline">alimentatesaludablehoy.com →</a>
+                    <a href="https://alimentatesaludablehoy.com/" target="_blank" rel="noopener" class="text-xs font-bold text-cyan-400 hover:underline">alimentatesaludablehoy.com →</a>
                 </div>
             </div>
         </div>
@@ -268,7 +268,6 @@
     <section id="blog" class="py-24 px-6 border-t border-slate-900 bg-slate-900/10">
         <div class="max-w-7xl mx-auto">
             <div class="text-center space-y-4 mb-16">
-
                 <h2 class="text-3xl font-extrabold" data-i18n="blog_title">Consejos & Tendencias del Sector</h2>
                 <p class="text-slate-400 max-w-2xl mx-auto text-sm" data-i18n="blog_subtitle">
                     Visita nuestro blog para obtener consejos útiles sobre marketing digital, estrategias efectivas de software y marcos legales corporativos.
@@ -318,13 +317,13 @@
                     <input type="email" id="formEmail" placeholder="nombre@empresa.com" class="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl px-4 py-3 text-sm text-slate-100 outline-none transition">
                 </div>
 
-                <!-- Paso 2: Teléfono (Oculto Inicialmente) -->
+                <!-- Paso 2: Teléfono -->
                 <div id="step2" class="space-y-2 hidden">
                     <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider">Número de Teléfono / WhatsApp</label>
                     <input type="tel" id="formPhone" placeholder="+57 300 000 0000" class="w-full bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl px-4 py-3 text-sm text-slate-100 outline-none transition">
                 </div>
 
-                <!-- Paso 3: Interés (Oculto Inicialmente) -->
+                <!-- Paso 3: Interés -->
                 <div id="step3" class="space-y-4 hidden">
                     <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider text-center">Selecciona tu interés principal</label>
                     <div class="grid grid-cols-1 gap-2">
@@ -372,8 +371,7 @@
                 p1_title: "División Growth & Vanguardia Digital", p1_desc: "Explotamos el poder absoluto de TikTok Ads y el ecosistema transaccional directo de TikTok Shop para consolidar conversiones masivas. Integramos de forma nativa los nuevos sistemas de ventas asistidos por IA (Google AI & Microsoft Copilot), automatizando la adquisición de leads calificados las 24 horas.",
                 p2_title: "Desarrollo de Software & Arquitectura API", p2_desc: "Ingeniería y desarrollo de sitios web corporativos y plataformas web optimizadas para una carga instantánea y SEO impecable. Diseñamos e implementamos arquitecturas API robustas e integraciones complejas de sistemas para asegurar que la data de su empresa opere en perfecta sincronía.",
                 p3_title: "Ecosistemas CRM Corporativos", p3_desc: "Los CRM genéricos fallan porque no entienden su operación. Diseñamos arquitecturas CRM personalizadas y adaptadas que van más allá del pipeline comercial clásico: incorporamos módulos de control financiero estratégico, analítica predictiva de márgenes y seguimiento de inventarios transfronterizos en tiempo real.",
-                p4_title: "Consultoría B2B, Expansión & Respaldo Legal", p4_desc: "Estructuración legal y fiscal integral para empresas locales y extranjeras. Gestionamos la creación y constitución de sociedades, optimización tributaria internacional y brindamos seguimiento jurídico corporativo permanente para blindar legalmente cada fase de su escalamiento comercial.", 
-
+                p4_title: "Consultoría B2B, Expansión & Respaldo Legal", p4_desc: "Estructuración legal y fiscal integral para empresas locales y extranjeras. Gestionamos la creación y constitución de sociedades, optimización tributaria internacional y brindamos seguimiento jurídico corporativo permanente para blindar legalmente cada fase de su escalamiento comercial.",
                 cases_title: "Ecosistemas Desplegados & Casos de Éxito", cases_subtitle: "Plataformas de alta disponibilidad operando bajo estrictos estándares internacionales de conversión y seguridad.",
                 c1_desc: "Pasarela de intercambio inmobiliario y activos RWA con integraciones avanzadas cripto/fiat, simplificando retiros y liquidación segura de capital en Bogotá y Chía.",
                 c2_desc: "Estructura transfronteriza (México-Colombia-USA). Desarrollamos un software personalizado de control de cantidades, analítica e inventarios integrados a su CRM para respaldar su expansión en Sudamérica.",
@@ -420,7 +418,7 @@
             });
         });
 
-        // Control del Formulario Interactivo Dinámico de Pasos
+        // Formulario de Pasos Interactivos
         let currentStep = 1;
         const nextBtn = document.getElementById('nextBtn');
         const prevBtn = document.getElementById('prevBtn');
@@ -465,8 +463,6 @@
 
         function selectInterest(interestValue) {
             collectedData.interest = interestValue;
-            console.log('Estructura de Conversión Completada con Éxito:', collectedData);
-            
             dynamicForm.classList.add('hidden');
             successMessage.classList.remove('hidden');
         }
